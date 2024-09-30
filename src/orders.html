@@ -1,0 +1,122 @@
+{{> partials/main }}
+
+<head>
+
+    {{> partials/title-meta title="Orders" }}
+
+    {{> partials/head-css }}
+
+</head>
+
+{{> partials/body }}
+
+<!-- Start Layout -->
+<div class="bg-[#f9fbfd] dark:bg-dark">
+
+    <!-- Start detached bg -->
+    <div class="bg-[url('../images/bg-main.png')] bg-black min-h-[220px] sm:min-h-[250px] bg-bottom fixed hidden w-full -z-50 detached-img"></div>
+    <!-- End detached bg -->
+
+    <!-- Start Menu Sidebar Olverlay -->
+    <div x-cloak class="fixed inset-0 bg-black/60 dark:bg-dark/90 z-10 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
+    <!-- End Menu Sidebar Olverlay -->
+
+    <!-- Start Main Content -->
+    <div class="flex mx-auto main-container">
+        {{> partials/sidebar }}
+
+        <!-- Start Content Area -->
+        <div class="flex-1 main-content">
+            {{> partials/topbar }}
+            <!-- Start Content -->
+            <div class="h-[calc(100vh-60px)]  relative overflow-y-auto overflow-x-hidden p-4 space-y-4 detached-content">
+                {{> partials/page-heading title="Sliced" sub-title="Orders" }}
+
+                <!-- Start All Card -->
+                <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
+                    <div class="grid grid-cols-12 gap-4">
+                        <div class="xl:col-span-12 col-span-12">
+                            <div class="grid grid-cols-12 gap-4">
+                                <div class="xl:col-span-4 col-span-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="flex justify-between">
+                                                <div class="">
+                                                    <p class="mb-4">Total Orders</p>
+                                                </div>
+                                                <div class="flex items-center justify-center font-semibold uppercase rounded-full size-10 rounded-circle bg-light dark:bg-darkborder dark:text-light text-dark">
+                                                    <i class="ri-list-unordered"></i>
+                                                </div>
+                                            </div>
+                                            <h4 class="text-xl mb-2">4567</h4>
+                                            <p class="text-muted mb-0"><span class="p-1 px-2 text-sm leading-none rounded-md bg-success/20 text-green-500 me-2"> 1.1% <i class="ri-arrow-up-line"></i> </span> From previous</p>
+                                        </div>
+                                    </div>
+                                    <!-- end card -->
+                                </div>
+                                <!-- end col -->
+                                <div class="xl:col-span-4 col-span-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="flex justify-between">
+                                                <div class="">
+                                                    <p class="mb-4">Completed Orders</p>
+                                                </div>
+                                                <div class="flex items-center justify-center font-semibold uppercase rounded-full size-10 rounded-circle bg-light dark:bg-darkborder dark:text-light text-dark">
+                                                    <i class="ri-checkbox-circle-line"></i>
+                                                </div>
+                                            </div>
+                                            <h4 class="text-xl mb-2">3599</h4>
+                                            <p class="text-muted mb-0"><span class="p-1 px-2 text-sm leading-none rounded-md bg-success/20 text-green-500 me-2"> 2.1% <i class="ri-arrow-up-line"></i> </span> From previous</p>
+                                        </div>
+                                    </div>
+                                    <!-- end card -->
+                                </div>
+                                <!-- end col -->
+                                <div class="xl:col-span-4 col-span-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="flex justify-between">
+                                                <div class="">
+                                                    <p class="mb-4">Refunds</p>
+                                                </div>
+                                                <div class="flex items-center justify-center font-semibold uppercase rounded-full size-10 rounded-circle bg-light dark:bg-darkborder dark:text-light text-dark">
+                                                    <i class="ri-exchange-line"></i>
+                                                </div>
+                                            </div>
+                                            <h4 class="text-xl mb-2">584</h4>
+                                            <p class="text-muted mb-0"><span class="p-1 px-2 text-sm leading-none rounded-md bg-success/20 text-green-500 me-2"> 0.7% <i class="ri-arrow-up-line"></i> </span> From previous</p>
+                                        </div>
+                                    </div>
+                                    <!-- end card -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end grid -->
+                        </div>
+                        <!-- end col -->
+                        <div class="xl:col-span-12 col-span-12">
+                            
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end grid -->
+                </div>
+                {{> partials/footer }}
+            </div>
+            <!-- End All Card -->
+        </div>
+    </div>
+</div>
+
+{{> partials/vendor-scripts }}
+
+<script type="module" src="assets/js/main.js"></script>
+
+<script>
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+{{> partials/main }}
+
+<head>
+
+    {{> partials/title-meta title="Blog" }}
+
+    {{> partials/head-css }}
+
+    <style>
+        .apexcharts-xaxis-tick {
+            display: none;
+        }
+        .apexcharts-point-annotations {
+            display: none;
+        }
+        .highcharts-background {
+            fill: transparent;
+        }
+        .highcharts-title {
+            fill: #2caffe !important;
+        }
+    </style>
+</head>
+
+{{> partials/body }}
+
+<!-- Start Layout -->
+<div class="bg-[#f9fbfd] dark:bg-dark">
+
+    <!-- Start detached bg -->
+    <div class="bg-[url('../images/bg-main.png')] bg-black group-data-[sidebar=dark]/item:bg-darklight group-data-[sidebar=brand]/item:bg-sky-950 min-h-[220px] sm:min-h-[250px] bg-bottom fixed hidden w-full -z-50 detached-img"></div>
+    <!-- End detached bg -->
+
+    <!-- Start Menu Sidebar Overlay -->
+    <div x-cloak class="fixed inset-0 bg-black/60 dark:bg-dark/90 z-10 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
+    <!-- End Menu Sidebar Overlay -->
+
+    <!-- Start Main Content -->
+    <div class="flex mx-auto main-container">
+        {{> partials/sidebar }}
+
+        <!-- Start Content Area -->
+        <div class="flex-1 main-content">
+            {{> partials/topbar }}
+            <!-- Start Content -->
+            <div class="h-[calc(100vh-60px)]  relative overflow-y-auto overflow-x-hidden p-4 space-y-4 detached-content">
+
+                {{> partials/page-heading title="Sliced" sub-title="Blog" }}
+
+                <!-- Start All Card -->
+                <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
+                    <div class="grid grid-cols-12 gap-4">
+                        <div class="xl:col-span-8 col-span-12">
+                            <div class="grid grid-cols-12 gap-4">
+                                <div class="col-span-12 card" style="background-image: url('assets/images/cubes.png');">
+                                    <div class="grid grid-cols-12">
+                                        <div class="sm:col-span-7 col-span-12">
+                                            <h4 class="text-lg mb-3 font-bold">Welcome to Sliced Pro Dashboard</h4>
+                                            <h5 class="text-lg">Create a post</h5>
+                                            <p class="mb-3 text-muted">Donec posuere vulputate arcu. Phasellus accumsan cursus velit</p>
+                                            <a href="javascript: void(0);" class="btn bg-purple text-white">Create post</a>
+                                        </div>
+                                        <div class="sm:col-span-5 col-span-12">
+                                            <div class="flex justify-end">
+                                                <img src="assets/images/blog.svg" class="sm:w-56" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-span-12">
+                                    <div class="xl:col-span-7 col-span-12">
+                                        <div class="card">
+                                            <div class="" id="chart8">
+                                                <h4 class="text-lg mb-2 font-bold">Visiter</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End col -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col -->
+                        <div class="xl:col-span-4 col-span-12">
+                            <div class="card p-4">
+                                <h4 class="text-lg mb-2 font-bold">Posts</h4>
+                                <div class="relative">
+                                    <input type="text" id="search" class="border-black/10 dark:text-white/80 dark:placeholder:text-white/30 dark:border-darkborder dark:bg-dark dark:focus:border-white/30 focus:border-black/30 placeholder:text-black/50 border text-black text-sm rounded block w-full ltr:pl-3 rtl:pr-3 ltr:pr-7 rtl:pl-7 h-10 bg-[#f9fbfd] focus:ring-0 focus:outline-0 mb-4" placeholder="Search..." required="">
+                                    <button type="button" class="absolute inset-y-0 flex items-center text-black ltr:right-0 rtl:left-0 ltr:pr-2 rtl:pl-2 dark:text-white/80">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4">
+                                            <path d="M11 2C15.968 2 20 6.032 20 11C20 15.968 15.968 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2ZM11 18C14.8675 18 18 14.8675 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18ZM19.4853 18.0711L22.3137 20.8995L20.8995 22.3137L18.0711 19.4853L19.4853 18.0711Z" fill="currentColor"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="flex">
+                                            <img src="assets/images/blog/img-1.png" class="w-20 rounded-md" alt="">
+                                            <div class="ms-3">
+                                                <h6 class="text-lg mb-2">Project discussion with team</h6>
+                                                <p class="text-muted"><i class="ri-calendar-line me-2"></i>10, Sep 2024</p>
+                                            </div>
+                                            <div x-data="{ dropdown: false}" class="ml-auto dropdown">
+                                                <a href="javaScript:;" class="text-black dark:text-white" @click="dropdown = !dropdown" @keydown.escape="dropdown = false">
+                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 12.75C9.69036 12.75 10.25 13.3096 10.25 14C10.25 14.6904 9.69036 15.25 9 15.25C8.30964 15.25 7.75 14.6904 7.75 14C7.75 13.3096 8.30964 12.75 9 12.75Z" fill="currentColor"></path>
+                                                        <path d="M14 12.75C14.6904 12.75 15.25 13.3096 15.25 14C15.25 14.6904 14.6904 15.25 14 15.25C13.3096 15.25 12.75 14.6904 12.75 14C12.75 13.3096 13.3096 12.75 14 12.75Z" fill="currentColor"></path>
+                                                        <path d="M20.25 14C20.25 13.3096 19.6904 12.75 19 12.75C18.3096 12.75 17.75 13.3096 17.75 14C17.75 14.6904 18.3096 15.25 19 15.25C19.6904 15.25 20.25 14.6904 20.25 14Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </a>
+                                                <ul x-show="dropdown" @click.away="dropdown = false" x-transition="" x-transition.duration.300ms="" class="ltr:right-0 rtl:left-0 whitespace-nowrap" style="display: none;">
+                                                    <li><a href="javascript:;">Weekly</a></li>
+                                                    <li><a href="javascript:;">Monthly</a></li>
+                                                    <li><a href="javascript:;">Yearly</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="flex">
+                                            <img src="assets/images/blog/img-2.png" class="w-20 rounded-md" alt="">
+                                            <div class="ms-3">
+                                                <h6 class="text-lg mb-2">Drawing a sketch</h6>
+                                                <p class="text-muted"><i class="ri-calendar-line me-2"></i>28, Aug 2024</p>
+                                            </div>
+                                            <div x-data="{ dropdown: false}" class="ml-auto dropdown">
+                                                <a href="javaScript:;" class="text-black dark:text-white" @click="dropdown = !dropdown" @keydown.escape="dropdown = false">
+                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 12.75C9.69036 12.75 10.25 13.3096 10.25 14C10.25 14.6904 9.69036 15.25 9 15.25C8.30964 15.25 7.75 14.6904 7.75 14C7.75 13.3096 8.30964 12.75 9 12.75Z" fill="currentColor"></path>
+                                                        <path d="M14 12.75C14.6904 12.75 15.25 13.3096 15.25 14C15.25 14.6904 14.6904 15.25 14 15.25C13.3096 15.25 12.75 14.6904 12.75 14C12.75 13.3096 13.3096 12.75 14 12.75Z" fill="currentColor"></path>
+                                                        <path d="M20.25 14C20.25 13.3096 19.6904 12.75 19 12.75C18.3096 12.75 17.75 13.3096 17.75 14C17.75 14.6904 18.3096 15.25 19 15.25C19.6904 15.25 20.25 14.6904 20.25 14Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </a>
+                                                <ul x-show="dropdown" @click.away="dropdown = false" x-transition="" x-transition.duration.300ms="" class="ltr:right-0 rtl:left-0 whitespace-nowrap" style="display: none;">
+                                                    <li><a href="javascript:;">Weekly</a></li>
+                                                    <li><a href="javascript:;">Monthly</a></li>
+                                                    <li><a href="javascript:;">Yearly</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="flex">
+                                            <img src="assets/images/blog/img-3.png" class="w-20 rounded-md" alt="">
+                                            <div class="ms-3">
+                                                <h6 class="text-lg mb-2">Beautiful Day with Friends</h6>
+                                                <p class="text-muted"><i class="ri-calendar-line me-2"></i>18, Aug 2024</p>
+                                            </div>
+                                            <div x-data="{ dropdown: false}" class="ml-auto dropdown">
+                                                <a href="javaScript:;" class="text-black dark:text-white" @click="dropdown = !dropdown" @keydown.escape="dropdown = false">
+                                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 12.75C9.69036 12.75 10.25 13.3096 10.25 14C10.25 14.6904 9.69036 15.25 9 15.25C8.30964 15.25 7.75 14.6904 7.75 14C7.75 13.3096 8.30964 12.75 9 12.75Z" fill="currentColor"></path>
+                                                        <path d="M14 12.75C14.6904 12.75 15.25 13.3096 15.25 14C15.25 14.6904 14.6904 15.25 14 15.25C13.3096 15.25 12.75 14.6904 12.75 14C12.75 13.3096 13.3096 12.75 14 12.75Z" fill="currentColor"></path>
+                                                        <path d="M20.25 14C20.25 13.3096 19.6904 12.75 19 12.75C18.3096 12.75 17.75 13.3096 17.75 14C17.75 14.6904 18.3096 15.25 19 15.25C19.6904 15.25 20.25 14.6904 20.25 14Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </a>
+                                                <ul x-show="dropdown" @click.away="dropdown = false" x-transition="" x-transition.duration.300ms="" class="ltr:right-0 rtl:left-0 whitespace-nowrap" style="display: none;">
+                                                    <li><a href="javascript:;">Weekly</a></li>
+                                                    <li><a href="javascript:;">Monthly</a></li>
+                                                    <li><a href="javascript:;">Yearly</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="javascript: void(0);" class="btn bg-purple text-white">Create post</a>
+                            </div>
+                        </div>
+                        <!-- End col -->
+                        <div class="xl:col-span-4 col-span-12">
+                            <div class="card p-4">
+                                <div class="flex justify-between">
+                                    <h4 class="text-lg mb-2 font-bold">Platform</h4>
+                                    <p class="text-muted">Last 7 Days</p>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="flex">
+                                            <div class="shrink-0 flex items-center justify-center font-semibold uppercase rounded-full size-12 bg-blue-500/10 text-purple">
+                                                <i class="ri-computer-line text-2xl"></i>
+                                            </div>
+                                            <div class="mx-3 w-full">
+                                                <div class="flex justify-between">
+                                                    <h6 class="font-semibold mb-3">Desktop</h6>
+                                                    <span class="text-muted">50%</span>
+                                                </div>
+                                                <div class="bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                                    <div class="bg-purple h-2.5 rounded-full" style="width: 50%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-body">
+                                        <div class="flex">
+                                            <div class="shrink-0 flex items-center justify-center font-semibold uppercase rounded-full size-12 bg-blue-500/10 text-purple">
+                                                <i class="ri-smartphone-line text-2xl"></i>
+                                            </div>
+                                            <div class="mx-3 w-full">
+                                                <div class="flex justify-between">
+                                                    <h6 class="font-semibold mb-3">Mobile</h6>
+                                                    <span class="text-muted">15%</span>
+                                                </div>
+                                                <div class="bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                                    <div class="bg-purple h-2.5 rounded-full" style="width: 15%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="flex">
+                                            <div class="shrink-0 flex items-center justify-center font-semibold uppercase rounded-full size-12 bg-blue-500/10 text-purple">
+                                                <i class="ri-tablet-line text-2xl"></i>
+                                            </div>
+                                            <div class="mx-3 w-full">
+                                                <div class="flex justify-between">
+                                                    <h6 class="font-semibold mb-3">Tablet</h6>
+                                                    <span class="text-muted">35%</span>
+                                                </div>
+                                                <div class="bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                                                    <div class="bg-purple h-2.5 rounded-full" style="width: 35%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="xl:col-span-8 col-span-12">
+                            <div class="card">
+                                <div class="flex justify-between mb-4">
+                                    <h2 class="text-base font-semibold capitalize text-slate-800 dark:text-slate-100">Top Visitors</h2>
+                                    <a href="#" class="px-3 py-1.5 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:hover:border-darklight dark:text-white dark:border-darkborder dark:hover:bg-white/85 dark:hover:border-white/85 border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Jun 2024</a>
+                                </div>
+                                <div class="grid grid-cols-12 gap-4">
+                                    <div class="col-span-12">
+                                        <div class="grid grid-cols-12">
+                                            <div class="sm:col-span-7 col-span-12">
+                                                <div class="mt-4">
+                                                    <p class="mb-2 text-muted">This month</p>
+                                                    <h4 class="mb-3 text-xl">15,547
+                                                        <span class="p-1 px-2 text-xs leading-none rounded-md bg-success/20 text-green-500">0.2 <i class="ri-arrow-up-fill"></i></span>
+                                                    </h4>
+                                                    <p class="text-muted mb-4">Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet ultrices mauris</p>
+                                                    <div>
+                                                        <a href="#" class="btn bg-purple text-white">View more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sm:col-span-5 col-span-12">
+                                                <div style="width: auto; height: 280px; margin: 0 auto">
+                                                    <div id="container"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+                </div>
+                <!-- End grid -->
+                {{> partials/footer }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> partials/vendor-scripts }}
+
+<script type="module" src="assets/js/main.js"></script>
+
+<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+
+<script src="http://code.highcharts.com/modules/solid-gauge.js"></script>
+
+<script>
+    $(function () {
+        var chart = $('#container').highcharts({
+            chart: {
+                type: 'pie'
+            },
+            credits: {
+                enabled: false
+            },
+            plotOptions: {
+                pie: {
+                    innerSize: '98%',
+                    borderWidth: 16,
+                    borderColor: null,
+                    dataLabels: {
+                        connectorWidth: 0
+                    }
+                }
+            },
+            title: {
+                verticalAlign: 'middle',
+                floating: true,
+                text: 'Visitors',
+            },
+            series: [{
+                data: [
+                    ['26.%', 26.00],
+                    { visible: false, y: 5 },
+                    ['32.0%', 32.00],
+                    { visible: false, y: 5 },
+                    ['15.0%', 15.00],
+                    { visible: false, y: 5 },
+                    ['27.0%', 27.00],
+                    { visible: false, y: 5 },
+                ],
+                ignoreHiddenPoint: false
+            }],
+        });
+    });
+</script>
+
+<script>
+    var options = {
+        series: [{
+            name: 'Servings',
+            data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 28, 46, 21, 65, 35]
+        }],
+        annotations: {
+            points: [{
+                seriesIndex: 0,
+                label: {
+                    borderColor: '#775DD0',
+                    offsetY: 0,
+                    style: {
+                        color: '#fff',
+                        background: '#775DD0',
+                    },
+                }
+            }]
+        },
+        chart: {
+            height: 291,
+            type: 'bar',
+            toolbar: 'fales',
+        },
+        plotOptions: {
+            bar: {
+                borderRadius: 10,
+                columnWidth: '50%',
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        stroke: {
+            width: 0
+        },
+        grid: {
+            row: {
+                colors: ['#fff', '#f2f2f2']
+            }
+        },
+        xaxis: {
+            labels: {
+                rotate: -45
+            },
+            categories: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017',
+                '2018', '2019', '2020', '2021', '2022', '2023', '2024'
+            ],
+            tickPlacement: 'on'
+        },
+        fill: {
+            type: 'gradient',
+            gradient: {
+                shade: 'light',
+                type: "horizontal",
+                shadeIntensity: 0.25,
+                gradientToColors: undefined,
+                inverseColors: true,
+                opacityFrom: 0.85,
+                opacityTo: 0.85,
+                stops: [50, 0, 100]
+            },
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart8"), options);
+    chart.render();
+</script>
+
+</body>
+
+</html>
