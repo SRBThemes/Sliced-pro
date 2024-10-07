@@ -31,13 +31,13 @@
             {{> partials/topbar }}
 
             <!-- Start Content -->
-            <div class="h-[calc(100vh-60px)]  relative overflow-y-auto overflow-x-hidden p-4 space-y-4 detached-content">
+            <div class="h-[calc(100vh-60px)] relative overflow-y-auto overflow-x-hidden p-4 space-y-4 detached-content">
                 {{> partials/page-heading title="Apps" sub-title="Contact" }}
 
                 <!-- Start All Card -->
                 <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]" >
                     <div x-data="contactsTable()" x-init="init()">
-                        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+                        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
                             <template x-for="(contact, index) in displayedContacts" :key="index">
                                 <div class="p-5 bg-white border rounded border-black/10 dark:bg-darklight dark:border-darkborder">
                                     <div class="flex items-center gap-2 mb-4">
@@ -68,17 +68,17 @@
                                     </p>
                                     <div class="flex items-center gap-4 mt-4">
                                         <a href="pages-users-profile.html" class="btn inline-block py-1 px-3.5 text-[13px] bg-purple border border-purple rounded-md text-white transition-all duration-300 hover:bg-purple/[0.85] hover:border-purple/[0.85]">Profile</a>
-                                        <a href="chat.html" class="btn inline-block py-1 px-3.5 text-[13px] dark:text-white dark:hover:text-black border border-light rounded-md text-black transition-all duration-300 hover:bg-light hover:text-black">Chat</a>
+                                        <a href="chat.html" class="btn inline-block py-1 px-3.5 text-[13px] dark:text-white dark:hover:text-black border border-light dark:border-darkborder rounded-md text-black transition-all duration-300 hover:bg-light hover:text-black">Chat</a>
                                     </div>
                                 </div>
                             </template>
                         </div>
-                        <div class="grid lg:grid-cols-12 grid-row-1 gap-5 mt-5">
-                            <div class="lg:col-span-6 ">
+                        <div class="grid md:grid-cols-12 grid-row-1 gap-5 mt-5">
+                            <div class="md:col-span-6 md:text-start text-center">
                                 <p class="text-gray-500">Showing <b x-text="showingStart"></b> - <b x-text="showingEnd"></b> of <b x-text="contacts.length"></b> Results</p>
                             </div>
-                            <div class="lg:col-span-6  ">
-                                <div class="flex items-center justify-end gap-2">
+                            <div class="md:col-span-6">
+                                <div class="flex items-center md:justify-end justify-center gap-2">
                                     <button @click="prevPage()" :disabled="currentPage === 1" class="flex justify-center px-3.5 py-2 rounded transition text-muted hover:text-purple border border-black/10 hover:border-purple dark:border-darkborder dark:text-darkmuted dark:hover:text-purple dark:hover:border-purple cursor-pointer">
                                         <i class="mr-1 ri-arrow-left-s-line"></i> Prev
                                     </button>

@@ -6,20 +6,6 @@
 
     {{> partials/head-css }}
 
-    <style>
-        .apexcharts-xaxis-tick {
-            display: none;
-        }
-        .apexcharts-point-annotations {
-            display: none;
-        }
-        .highcharts-background {
-            fill: transparent;
-        }
-        .highcharts-title {
-            fill: #2caffe !important;
-        }
-    </style>
 </head>
 
 {{> partials/body }}
@@ -43,22 +29,20 @@
         <div class="flex-1 main-content">
             {{> partials/topbar }}
             <!-- Start Content -->
-            <div class="h-[calc(100vh-60px)]  relative overflow-y-auto overflow-x-hidden p-4 space-y-4 detached-content">
-
+            <div class="h-[calc(100vh-60px)] relative overflow-y-auto overflow-x-hidden p-4 space-y-4 detached-content">
                 {{> partials/page-heading title="Sliced" sub-title="Blog" }}
-
                 <!-- Start All Card -->
                 <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
                     <div class="grid grid-cols-12 gap-4">
                         <div class="xl:col-span-8 col-span-12">
                             <div class="grid grid-cols-12 gap-4">
-                                <div class="col-span-12 card" style="background-image: url('assets/images/cubes.png');">
+                                <div class="col-span-12 card">
                                     <div class="grid grid-cols-12">
                                         <div class="sm:col-span-7 col-span-12">
                                             <h4 class="text-lg mb-3 font-bold">Welcome to Sliced Pro Dashboard</h4>
                                             <h5 class="text-lg">Create a post</h5>
                                             <p class="mb-3 text-muted">Donec posuere vulputate arcu. Phasellus accumsan cursus velit</p>
-                                            <a href="javascript: void(0);" class="btn bg-purple text-white">Create post</a>
+                                            <a href="javascript: void(0);" class="btn bg-purple text-white border-purple">Create post</a>
                                         </div>
                                         <div class="sm:col-span-5 col-span-12">
                                             <div class="flex justify-end">
@@ -70,7 +54,7 @@
                                 <div class="col-span-12">
                                     <div class="xl:col-span-7 col-span-12">
                                         <div class="card">
-                                            <div class="" id="chart8">
+                                            <div class="" id="visiter">
                                                 <h4 class="text-lg mb-2 font-bold">Visiter</h4>
                                             </div>
                                         </div>
@@ -166,7 +150,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="javascript: void(0);" class="btn bg-purple text-white">Create post</a>
+                                <a href="javascript: void(0);" class="btn bg-purple text-white border-purple">Create post</a>
                             </div>
                         </div>
                         <!-- End col -->
@@ -237,7 +221,7 @@
                             <div class="card">
                                 <div class="flex justify-between mb-4">
                                     <h2 class="text-base font-semibold capitalize text-slate-800 dark:text-slate-100">Top Visitors</h2>
-                                    <a href="#" class="px-3 py-1.5 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:hover:border-darklight dark:text-white dark:border-darkborder dark:hover:bg-white/85 dark:hover:border-white/85 border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Jun 2024</a>
+                                    <a href="#" class="px-3 py-1.5 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:hover:border-darklight dark:text-white dark:border-darkborder dark:hover:border-white/20 border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Jun 2024</a>
                                 </div>
                                 <div class="grid grid-cols-12 gap-4">
                                     <div class="col-span-12">
@@ -250,13 +234,13 @@
                                                     </h4>
                                                     <p class="text-muted mb-4">Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet ultrices mauris</p>
                                                     <div>
-                                                        <a href="#" class="btn bg-purple text-white">View more</a>
+                                                        <a href="#" class="btn bg-purple text-white border-purple">View more</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="sm:col-span-5 col-span-12">
-                                                <div style="width: auto; height: 280px; margin: 0 auto">
-                                                    <div id="container"></div>
+                                                <div style="height: 280px;">
+                                                    <div class="h-full" id="pie"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -288,115 +272,7 @@
 
 <script src="http://code.highcharts.com/modules/solid-gauge.js"></script>
 
-<script>
-    $(function () {
-        var chart = $('#container').highcharts({
-            chart: {
-                type: 'pie'
-            },
-            credits: {
-                enabled: false
-            },
-            plotOptions: {
-                pie: {
-                    innerSize: '98%',
-                    borderWidth: 16,
-                    borderColor: null,
-                    dataLabels: {
-                        connectorWidth: 0
-                    }
-                }
-            },
-            title: {
-                verticalAlign: 'middle',
-                floating: true,
-                text: 'Visitors',
-            },
-            series: [{
-                data: [
-                    ['26.%', 26.00],
-                    { visible: false, y: 5 },
-                    ['32.0%', 32.00],
-                    { visible: false, y: 5 },
-                    ['15.0%', 15.00],
-                    { visible: false, y: 5 },
-                    ['27.0%', 27.00],
-                    { visible: false, y: 5 },
-                ],
-                ignoreHiddenPoint: false
-            }],
-        });
-    });
-</script>
-
-<script>
-    var options = {
-        series: [{
-            name: 'Servings',
-            data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 28, 46, 21, 65, 35]
-        }],
-        annotations: {
-            points: [{
-                seriesIndex: 0,
-                label: {
-                    borderColor: '#775DD0',
-                    offsetY: 0,
-                    style: {
-                        color: '#fff',
-                        background: '#775DD0',
-                    },
-                }
-            }]
-        },
-        chart: {
-            height: 291,
-            type: 'bar',
-            toolbar: 'fales',
-        },
-        plotOptions: {
-            bar: {
-                borderRadius: 10,
-                columnWidth: '50%',
-            }
-        },
-        dataLabels: {
-            enabled: false
-        },
-        stroke: {
-            width: 0
-        },
-        grid: {
-            row: {
-                colors: ['#fff', '#f2f2f2']
-            }
-        },
-        xaxis: {
-            labels: {
-                rotate: -45
-            },
-            categories: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017',
-                '2018', '2019', '2020', '2021', '2022', '2023', '2024'
-            ],
-            tickPlacement: 'on'
-        },
-        fill: {
-            type: 'gradient',
-            gradient: {
-                shade: 'light',
-                type: "horizontal",
-                shadeIntensity: 0.25,
-                gradientToColors: undefined,
-                inverseColors: true,
-                opacityFrom: 0.85,
-                opacityTo: 0.85,
-                stops: [50, 0, 100]
-            },
-        }
-    };
-
-    var chart = new ApexCharts(document.querySelector("#chart8"), options);
-    chart.render();
-</script>
+<script src="assets/js/pages/blog.js"></script>
 
 </body>
 

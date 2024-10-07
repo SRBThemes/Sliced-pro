@@ -6,16 +6,6 @@
 
     {{> partials/head-css }}
 
-    <style>
-        .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center {
-            justify-content: space-between !important;
-        }
-
-        .apexcharts-legend-series {
-            margin: 0px !important;
-        }
-    </style>
-
 </head>
 
 {{> partials/body }}
@@ -39,7 +29,7 @@
         <div class="flex-1 main-content">
             {{> partials/topbar }}
             <!-- Start Content -->
-            <div class="h-[calc(100vh-60px)]  relative overflow-y-auto overflow-x-hidden p-4 space-y-4 detached-content">
+            <div class="h-[calc(100vh-60px)] relative overflow-y-auto overflow-x-hidden p-4 space-y-4 detached-content">
 
                 {{> partials/page-heading title="Sliced" sub-title="Real Estate" }}
 
@@ -110,9 +100,7 @@
                                 <!-- end col -->
                                 <div class="xl:col-span-12 col-span-12">
                                     <div class="card">
-
-                                        <div class="" id="chart9">
-                                        </div>
+                                        <div id="overview"></div>
                                     </div>
                                 </div>
                                 <!-- end col -->
@@ -124,21 +112,21 @@
                             <div class="grid grid-cols-12 gap-4">
                                 <div class="xl:col-span-12 col-span-12">
                                     <div class="card">
-                                        <div class="flex border-b pb-3 mb-3">
-                                            <img src="assets/images/avatar-1.png" class="w-2/6 rounded-md" alt="">
+                                        <div class="flex border-b dark:border-darkborder pb-3 mb-3">
+                                            <img src="assets/images/property/img-8.png" class="xl:w-2/6 sm:w-2/12 w-5/12 rounded-md" alt="">
                                             <div class="ms-4 w-full">
                                                 <div class="flex justify-between">
-                                                    <h5 class="mb-2 font-semibold">ApexCharts</h5>
+                                                    <h5 class="mb-2 font-semibold">Alexander Court</h5>
                                                     <i class="ri-more-2-line"></i>
                                                 </div>
                                                 <div class="mb-2">
                                                     <i class="ri-arrow-right-down-line"></i>
-                                                    <span>3 Room</span>
+                                                    <span class="text-muted">3 Room</span>
                                                     <i class="ri-arrow-right-down-line"></i>
                                                     <span>2 Bathroom</span>
                                                 </div>
                                                 <p class="mb-3">500sq</p>
-                                                <div class="border-t mb-3"></div>
+                                                <div class="border-t dark:border-darkborder mb-3"></div>
                                                 <div class="flex justify-between">
                                                     <h6>$800</h6>
                                                     <span>
@@ -148,21 +136,21 @@
                                             </div>
                                         </div>
 
-                                        <div class="flex border-b pb-3 mb-3">
-                                            <img src="assets/images/avatar-2.png" class="w-2/6 rounded-md" alt="">
+                                        <div class="flex border-b dark:border-darkborder pb-3 mb-3">
+                                            <img src="assets/images/property/img-7.png" class="xl:w-2/6 sm:w-2/12 w-5/12 rounded-md" alt="">
                                             <div class="ms-4 w-full">
                                                 <div class="flex justify-between">
-                                                    <h5 class="mb-2 font-semibold">ApexCharts</h5>
+                                                    <h5 class="mb-2 font-semibold">Forest Villa</h5>
                                                     <i class="ri-more-2-line"></i>
                                                 </div>
                                                 <div class="mb-2">
                                                     <i class="ri-arrow-right-down-line"></i>
-                                                    <span>3 Room</span>
+                                                    <span class="text-muted">3 Room</span>
                                                     <i class="ri-arrow-right-down-line"></i>
                                                     <span>2 Bathroom</span>
                                                 </div>
                                                 <p class="mb-3">500sq</p>
-                                                <div class="border-t mb-3"></div>
+                                                <div class="border-t dark:border-darkborder mb-3"></div>
                                                 <div class="flex justify-between">
                                                     <h6>$800</h6>
                                                     <span>
@@ -172,21 +160,21 @@
                                             </div>
                                         </div>
 
-                                        <div class="flex border-b pb-3 mb-3">
-                                            <img src="assets/images/avatar-3.png" class="w-2/6 rounded-md" alt="">
+                                        <div class="flex border-b dark:border-darkborder pb-3 mb-3">
+                                            <img src="assets/images/property/img-9.png" class="xl:w-2/6 sm:w-2/12 w-5/12 rounded-md" alt="">
                                             <div class="ms-4 w-full">
                                                 <div class="flex justify-between">
-                                                    <h5 class="mb-2 font-semibold">ApexCharts</h5>
+                                                    <h5 class="mb-2 font-semibold">Penthouse Flat</h5>
                                                     <i class="ri-more-2-line"></i>
                                                 </div>
                                                 <div class="mb-2">
                                                     <i class="ri-arrow-right-down-line"></i>
-                                                    <span>3 Room</span>
+                                                    <span class="text-muted">3 Room</span>
                                                     <i class="ri-arrow-right-down-line"></i>
                                                     <span>2 Bathroom</span>
                                                 </div>
                                                 <p class="mb-3">500sq</p>
-                                                <div class="border-t mb-3"></div>
+                                                <div class="border-t dark:border-darkborder mb-3"></div>
                                                 <div class="flex justify-between">
                                                     <h6>$800</h6>
                                                     <span>
@@ -196,21 +184,21 @@
                                             </div>
                                         </div>
 
-                                        <div class="flex items-center">
-                                            <img src="assets/images/avatar-4.png" class="w-2/6 rounded-md" alt="">
+                                        <div class="flex border-b dark:border-darkborder pb-3 mb-3">
+                                            <img src="assets/images/property/img-10.png" class="xl:w-2/6 sm:w-2/12 w-5/12 rounded-md" alt="">
                                             <div class="ms-4 w-full">
                                                 <div class="flex justify-between">
-                                                    <h5 class="mb-2 font-semibold">ApexCharts</h5>
+                                                    <h5 class="mb-2 font-semibold">Duplex Flat</h5>
                                                     <i class="ri-more-2-line"></i>
                                                 </div>
                                                 <div class="mb-2">
                                                     <i class="ri-arrow-right-down-line"></i>
-                                                    <span>3 Room</span>
+                                                    <span class="text-muted">3 Room</span>
                                                     <i class="ri-arrow-right-down-line"></i>
                                                     <span>2 Bathroom</span>
                                                 </div>
                                                 <p class="mb-3">500sq</p>
-                                                <div class="border-t mb-3"></div>
+                                                <div class="border-t dark:border-darkborder mb-3"></div>
                                                 <div class="flex justify-between">
                                                     <h6>$800</h6>
                                                     <span>
@@ -250,56 +238,56 @@
                                     <div class="flex justify-between items-center py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-3.png" class="rounded-full size-8 me-2" alt="">
-                                            <div class="">
+                                            <div>
                                                 <h6>Clarissa</h6>
                                                 <span class="text-xs text-muted">Property Dealr</span>
                                             </div>
                                         </div>
-                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:hover:border-darklight dark:text-white dark:border-darkborder dark:hover:bg-white/85 dark:hover:border-white/85 border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
+                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                     <hr class="dark:border-darkborder">
                                     <div class="flex justify-between items-center py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-8.png" class="rounded-full size-8 me-2" alt="">
-                                            <div class="">
+                                            <div>
                                                 <h6>James</h6>
                                                 <span class="text-xs text-muted">Property Dealr</span>
                                             </div>
                                         </div>
-                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:hover:border-darklight dark:text-white dark:border-darkborder dark:hover:bg-white/85 dark:hover:border-white/85 border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
+                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                     <hr class="dark:border-darkborder">
                                     <div class="flex justify-between items-center py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-5.png" class="rounded-full size-8 me-2" alt="">
-                                            <div class="">
+                                            <div>
                                                 <h6>William </h6>
                                                 <span class="text-xs text-muted">Property Dealr</span>
                                             </div>
                                         </div>
-                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:hover:border-darklight dark:text-white dark:border-darkborder dark:hover:bg-white/85 dark:hover:border-white/85 border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
+                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                     <hr class="dark:border-darkborder">
                                     <div class="flex justify-between items-center py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-6.png" class="rounded-full size-8 me-2" alt="">
-                                            <div class="">
+                                            <div>
                                                 <h6>Leatrice</h6>
                                                 <span class="text-xs text-muted">Property Dealr</span>
                                             </div>
                                         </div>
-                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:hover:border-darklight dark:text-white dark:border-darkborder dark:hover:bg-white/85 dark:hover:border-white/85 border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
+                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                     <hr class="dark:border-darkborder">
                                     <div class="flex justify-between items-center py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-7.png" class="rounded-full size-8 me-2" alt="">
-                                            <div class="">
+                                            <div>
                                                 <h6>Florence</h6>
                                                 <span class="text-xs text-muted">Property Dealr</span>
                                             </div>
                                         </div>
-                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:hover:border-darklight dark:text-white dark:border-darkborder dark:hover:bg-white/85 dark:hover:border-white/85 border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
+                                        <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                 </div>
                             </div>
@@ -375,7 +363,7 @@
                     </div>
                     <!-- end grid -->
                     <div class="grid grid-cols-12 gap-4">
-                        <div class="xl:col-span-4 col-span-12">
+                        <div class="xl:col-span-4 md:col-span-6 col-span-12">
                             <div class="card">
                                 <div class="flex justify-between items-center mb-[5px]">
                                     <h5 class="font-semibold text-lg">Sales Analytics</h5>
@@ -385,7 +373,7 @@
                             </div>
                         </div>
                         <!-- end col -->
-                        <div class="xl:col-span-4 col-span-12">
+                        <div class="xl:col-span-4 md:col-span-6 col-span-12 lg:-order-none order-1">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="cart-header flex justify-between">
@@ -405,8 +393,7 @@
                                             </ul>
                                         </div>
                                     </div>
-
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
                                             <div class="flex items-center justify-center relative">
                                                 <img src="assets/images/avatar-12.png" class="rounded-full size-12 me-2" alt="">
@@ -414,16 +401,16 @@
                                                     <i class="ri-home-2-fill text-sm"></i>
                                                 </span>
                                             </div>
-                                            <div class="">
-                                                <h4 class="">Liked has been your selling </h4>
-                                                <span class="text-xs text-muted"> 
-                                                    <i class="ri-time-line"></i> 1:20 
+                                            <div>
+                                                <h4>Viewed your profile </h4>
+                                                <span class="text-xs text-muted">
+                                                    <i class="ri-time-line"></i> 1:20
                                                 </span>
                                             </div>
                                         </div>
                                         <span class="text-muted">16 Aug</span>
                                     </div>
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
                                             <div class="flex items-center justify-center relative">
                                                 <img src="assets/images/avatar-14.png" class="rounded-full size-12 me-2" alt="">
@@ -431,16 +418,16 @@
                                                     <i class="ri-thumb-up-fill text-sm"></i>
                                                 </span>
                                             </div>
-                                            <div class="">
-                                                <h4 class="">Liked has been your selling </h4>
-                                                <span class="text-xs text-muted"> 
-                                                    <i class="ri-time-line"></i> 5:23 
+                                            <div>
+                                                <h4>Liked has been your selling </h4>
+                                                <span class="text-xs text-muted">
+                                                    <i class="ri-time-line"></i> 5:23
                                                 </span>
                                             </div>
                                         </div>
                                         <span class="text-muted">8 Aug</span>
                                     </div>
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
                                             <div class="flex items-center justify-center relative">
                                                 <img src="assets/images/avatar-15.png" class="rounded-full size-12 me-2" alt="">
@@ -448,16 +435,16 @@
                                                     <i class="ri-heart-fill text-sm"></i>
                                                 </span>
                                             </div>
-                                            <div class="">
-                                                <h4 class="">Liked has been your selling </h4>
-                                                <span class="text-xs text-muted"> 
-                                                    <i class="ri-time-line"></i> 18:50 
+                                            <div>
+                                                <h4>Liked has been your selling </h4>
+                                                <span class="text-xs text-muted">
+                                                    <i class="ri-time-line"></i> 18:50
                                                 </span>
                                             </div>
                                         </div>
                                         <span class="text-muted">4 Aug</span>
                                     </div>
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
                                             <div class="flex items-center justify-center relative">
                                                 <img src="assets/images/avatar-16.png" class="rounded-full size-12 me-2" alt="">
@@ -465,16 +452,16 @@
                                                     <i class="ri-home-2-fill text-sm"></i>
                                                 </span>
                                             </div>
-                                            <div class="">
-                                                <h4 class="">Liked has been your selling </h4>
-                                                <span class="text-xs text-muted"> 
-                                                    <i class="ri-time-line"></i> 18:50 
+                                            <div>
+                                                <h4>Viewed your profile </h4>
+                                                <span class="text-xs text-muted">
+                                                    <i class="ri-time-line"></i> 18:50
                                                 </span>
                                             </div>
                                         </div>
                                         <span class="text-muted">31 Jul</span>
                                     </div>
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
                                             <div class="flex items-center justify-center relative">
                                                 <img src="assets/images/avatar-17.png" class="rounded-full size-12 me-2" alt="">
@@ -482,10 +469,10 @@
                                                     <i class="ri-home-2-fill text-sm"></i>
                                                 </span>
                                             </div>
-                                            <div class="">
-                                                <h4 class="">Liked has been your selling </h4>
-                                                <span class="text-xs text-muted"> 
-                                                    <i class="ri-time-line"></i> 18:50 
+                                            <div>
+                                                <h4>Viewed your profile </h4>
+                                                <span class="text-xs text-muted">
+                                                    <i class="ri-time-line"></i> 18:50
                                                 </span>
                                             </div>
                                         </div>
@@ -495,190 +482,33 @@
                             </div>
                         </div>
                         <!-- end col -->
-                         <div class="xl:col-span-4 col-span-12">
+                        <div class="xl:col-span-4 md:col-span-6 col-span-12">
                             <div class="card">
                                 <div class="flex justify-between items-center mb-[5px]">
                                     <h5 class="font-semibold text-lg">Sales Analytics</h5>
                                     <a href="#" class="px-3 py-1.5 rounded-md text-xs border border-black/20 dark:border-darkborder text-muted"><i class="align-bottom ltr:mr-1 rtl:ml-1 ri-filter-line"></i> Aug 2023</a>
                                 </div>
-                                <div class="" id="chart10"></div>
+                                <div id="analytics"></div>
                             </div>
-                         </div>
-                         <!-- end col -->
+                        </div>
+                        <!-- end col -->
                     </div>
                     <!-- End grid -->
-                    {{> partials/footer }}
                 </div>
+                <!-- end all card -->
+                {{> partials/footer }}
             </div>
         </div>
     </div>
+</div>
 
-    {{> partials/vendor-scripts }}
+{{> partials/vendor-scripts }}
 
-    <script type="module" src="assets/js/main.js"></script>
-    <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/js/pages/appexchart-app.js"></script>
+<script type="module" src="assets/js/main.js"></script>
+<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+<script src="assets/js/pages/appexchart-app.js"></script>
+<script src="assets/js/pages/real-estate..js"></script>
 
-    <script>
-        var options = {
-          series: [14, 21, 10, 12, 17, 21],
-          chart: {
-          type: 'polarArea',
-        },
-        legend: {
-                show: true,
-                position: 'bottom',
-                floating: true,
-                verticalAlign: 'bottom',
-                align: 'center'
-            },
-        stroke: {
-          colors: ['#fff']
-        },
-        fill: {
-          opacity: 0.8
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: 'bottom'
-            }
-          }
-        }]
-        };
+</body>
 
-        var chart = new ApexCharts(document.querySelector("#chart10"), options);
-        chart.render();
-    </script>
-
-    <script>
-        var options = {
-            series: [44, 55, 41, 17, 15],
-            chart: {
-                type: 'donut',
-                width: '100%',
-            },
-            legend: {
-                show: true,
-                position: 'bottom',
-                floating: true,
-                verticalAlign: 'bottom',
-                align: 'center'
-            },
-            responsive: [{
-                breakpoint: 480,
-                options: {
-                    chart: {
-                        width: 250,
-                        height: 200
-                    },
-                },
-            }]
-        };
-
-        var chart = new ApexCharts(document.querySelector("#pie"), options);
-        chart.render();
-    </script>
-
-    <script>
-        var options = {
-            series: [{
-                name: 'Income',
-                type: 'column',
-                data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
-            }, {
-                name: 'Cashflow',
-                type: 'column',
-                data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5]
-            }, {
-                name: 'Revenue',
-                type: 'column',
-                data: [20, 29, 37, 36, 44, 45, 50, 58]
-            }],
-            chart: {
-                height: 360,
-                type: 'bar',
-                stacked: false,
-                toolbar: {
-                    show: false
-                }
-            },
-            dataLabels: {
-                enabled: false
-            },
-            stroke: {
-                width: [1, 1, 4]
-            },
-            xaxis: {
-                categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
-            },
-            yaxis: [
-                {
-                    seriesName: 'Income',
-                    axisTicks: {
-                        show: true,
-                    },
-                    axisBorder: {
-                        show: true,
-                        color: '#008FFB'
-                    },
-                    labels: {
-                        style: {
-                            colors: '#008FFB',
-                        }
-                    },
-                    tooltip: {
-                        enabled: true
-                    }
-                },
-                {
-                    seriesName: 'Cashflow',
-                    opposite: true,
-                    axisTicks: {
-                        show: true,
-                    },
-                    axisBorder: {
-                        show: true,
-                        color: '#00E396'
-                    },
-                    labels: {
-                        style: {
-                            colors: '#00E396',
-                        }
-                    },
-                },
-                {
-                    seriesName: 'Revenue',
-                    opposite: true,
-                    axisTicks: {
-                        show: true,
-                    },
-                    axisBorder: {
-                        show: true,
-                        color: '#FEB019'
-                    },
-                    labels: {
-                        style: {
-                            colors: '#FEB019',
-                        },
-                    },
-                },
-            ],
-            legend: {
-                horizontalAlign: 'left',
-                offsetX: 40
-            }
-        };
-
-        var chart = new ApexCharts(document.querySelector("#chart9"), options);
-        chart.render();
-
-    </script>
-
-    </body>
-
-    </html>
+</html>

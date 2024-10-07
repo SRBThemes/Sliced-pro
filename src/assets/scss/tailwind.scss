@@ -218,7 +218,7 @@ html[data-mode="dark"] {
     background-color: #151515;
     color: #fff;
   }
-  
+
   .vertical.toggle-sidebar .sidebar:hover .main-logo .logo.light-logo {
     display: block;
   }
@@ -233,4 +233,45 @@ html[data-mode="dark"] {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+// real estate dashboard
+.apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center {
+  justify-content: space-between !important;
+}
+
+.apexcharts-legend-series {
+  margin: 0px !important;
+}
+
+// blog dashboard
+html[data-mode="dark"] {
+  .apexcharts-grid-row {
+    fill: #1f1f1f;
+  }
+  .highcharts-label {
+    .highcharts-label-box {
+      fill: #1f1f1f;
+    }
+    text {
+      color: #fff !important;
+      fill: #fff !important;
+    }
+  }
+}
+
+.apexcharts-xaxis-tick {
+  display: none;
+}
+
+.apexcharts-point-annotations {
+  display: none;
+}
+
+.highcharts-background {
+  fill: transparent;
+}
+
+.highcharts-title {
+  fill: #2caffe !important;
 }
