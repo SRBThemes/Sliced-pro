@@ -20,7 +20,7 @@ var options = {
         }]
     },
     chart: {
-        height: 291,
+        height: 280,
         type: 'bar',
         toolbar: 'fales',
     },

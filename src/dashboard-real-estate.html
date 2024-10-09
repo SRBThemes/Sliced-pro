@@ -36,7 +36,7 @@
                 <!-- Start All Card -->
                 <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
                     <div class="grid grid-cols-12 gap-4">
-                        <div class="col-span-12 xl:col-span-9">
+                        <div class="col-span-12 2xl:col-span-9">
                             <div class="grid grid-cols-12 gap-4">
                                 <div class="col-span-12 xl:col-span-4 lg:col-span-12">
                                     <div class="gap-6 card">
@@ -100,6 +100,10 @@
                                 <!-- end col -->
                                 <div class="col-span-12 xl:col-span-12">
                                     <div class="card">
+                                        <div class="flex justify-between items-center mb-[5px]">
+                                            <h5 class="text-lg font-semibold">Reservations Per Day</h5>
+                                            <a href="#" class="px-3 py-1.5 rounded-md text-xs border border-black/20 dark:border-darkborder text-muted"><i class="align-bottom ltr:mr-1 rtl:ml-1 ri-filter-line"></i> Aug 2024</a>
+                                        </div>
                                         <div id="overview"></div>
                                     </div>
                                 </div>
@@ -108,12 +112,12 @@
                             <!-- end grid -->
                         </div>
                         <!-- end col -->
-                        <div class="col-span-12 xl:col-span-3">
+                        <div class="col-span-12 2xl:col-span-3">
                             <div class="grid grid-cols-12 gap-4">
                                 <div class="col-span-12 xl:col-span-12">
                                     <div class="card">
                                         <div class="flex pb-3 mb-3 border-b dark:border-darkborder">
-                                            <img src="assets/images/property/img-8.png" class="w-5/12 rounded-md xl:w-2/6 sm:w-2/12" alt="">
+                                            <img src="assets/images/property/img-8.png" class="w-5/12 rounded-md 2xl:w-2/6 sm:w-2/12" alt="">
                                             <div class="w-full ms-4">
                                                 <div class="flex justify-between">
                                                     <h5 class="mb-2 font-semibold">Alexander Court</h5>
@@ -137,7 +141,7 @@
                                         </div>
 
                                         <div class="flex pb-3 mb-3 border-b dark:border-darkborder">
-                                            <img src="assets/images/property/img-7.png" class="w-5/12 rounded-md xl:w-2/6 sm:w-2/12" alt="">
+                                            <img src="assets/images/property/img-7.png" class="w-5/12 rounded-md 2xl:w-2/6 sm:w-2/12" alt="">
                                             <div class="w-full ms-4">
                                                 <div class="flex justify-between">
                                                     <h5 class="mb-2 font-semibold">Forest Villa</h5>
@@ -161,7 +165,7 @@
                                         </div>
 
                                         <div class="flex pb-3 mb-3 border-b dark:border-darkborder">
-                                            <img src="assets/images/property/img-9.png" class="w-5/12 rounded-md xl:w-2/6 sm:w-2/12" alt="">
+                                            <img src="assets/images/property/img-9.png" class="w-5/12 rounded-md 2xl:w-2/6 sm:w-2/12" alt="">
                                             <div class="w-full ms-4">
                                                 <div class="flex justify-between">
                                                     <h5 class="mb-2 font-semibold">Penthouse Flat</h5>
@@ -185,7 +189,7 @@
                                         </div>
 
                                         <div class="flex pb-3 mb-3 border-b dark:border-darkborder">
-                                            <img src="assets/images/property/img-10.png" class="w-5/12 rounded-md xl:w-2/6 sm:w-2/12" alt="">
+                                            <img src="assets/images/property/img-10.png" class="w-5/12 rounded-md 2xl:w-2/6 sm:w-2/12" alt="">
                                             <div class="w-full ms-4">
                                                 <div class="flex justify-between">
                                                     <h5 class="mb-2 font-semibold">Duplex Flat</h5>
@@ -363,133 +367,127 @@
                     </div>
                     <!-- end grid -->
                     <div class="grid grid-cols-12 gap-4">
-                        <div class="col-span-12 xl:col-span-4 md:col-span-6">
-                            <div class="card">
-                                <div class="flex justify-between items-center mb-[5px]">
-                                    <h5 class="text-lg font-semibold">Sales Analytics</h5>
-                                    <a href="#" class="px-3 py-1.5 rounded-md text-xs border border-black/20 dark:border-darkborder text-muted"><i class="align-bottom ltr:mr-1 rtl:ml-1 ri-filter-line"></i> Aug 2023</a>
-                                </div>
-                                <div id="pie"></div>
+                        <div class="col-span-12 xl:col-span-4 md:col-span-6 card">
+                            <div class="flex justify-between items-center mb-[5px]">
+                                <h5 class="text-lg font-semibold">Sales Analytics</h5>
+                                <a href="#" class="px-3 py-1.5 rounded-md text-xs border border-black/20 dark:border-darkborder text-muted"><i class="align-bottom ltr:mr-1 rtl:ml-1 ri-filter-line"></i> Aug 2024</a>
                             </div>
+                            <div id="pie"></div>
                         </div>
                         <!-- end col -->
-                        <div class="order-1 col-span-12 xl:col-span-4 md:col-span-6 lg:-order-none">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="flex justify-between cart-header">
-                                        <h6 class="mb-4 text-base font-semibold capitalize text-slate-800 dark:text-slate-100">Full Activity</h6>
-                                        <div x-data="{ dropdown: false}" class="ml-auto dropdown">
-                                            <a href="javaScript:;" class="text-black dark:text-white" @click="dropdown = !dropdown" @keydown.escape="dropdown = false">
-                                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M9 12.75C9.69036 12.75 10.25 13.3096 10.25 14C10.25 14.6904 9.69036 15.25 9 15.25C8.30964 15.25 7.75 14.6904 7.75 14C7.75 13.3096 8.30964 12.75 9 12.75Z" fill="currentColor"></path>
-                                                    <path d="M14 12.75C14.6904 12.75 15.25 13.3096 15.25 14C15.25 14.6904 14.6904 15.25 14 15.25C13.3096 15.25 12.75 14.6904 12.75 14C12.75 13.3096 13.3096 12.75 14 12.75Z" fill="currentColor"></path>
-                                                    <path d="M20.25 14C20.25 13.3096 19.6904 12.75 19 12.75C18.3096 12.75 17.75 13.3096 17.75 14C17.75 14.6904 18.3096 15.25 19 15.25C19.6904 15.25 20.25 14.6904 20.25 14Z" fill="currentColor"></path>
-                                                </svg>
-                                            </a>
-                                            <ul x-show="dropdown" @click.away="dropdown = false" x-transition="" x-transition.duration.300ms="" class="ltr:right-0 rtl:left-0 whitespace-nowrap" style="display: none;">
-                                                <li><a href="javascript:;">Weekly</a></li>
-                                                <li><a href="javascript:;">Monthly</a></li>
-                                                <li><a href="javascript:;">Yearly</a></li>
-                                            </ul>
+                        <div class="order-1 col-span-12 xl:col-span-4 md:col-span-6 card lg:-order-none">
+                            <div class="card-body">
+                                <div class="flex justify-between cart-header">
+                                    <h6 class="mb-4 text-base font-semibold capitalize text-slate-800 dark:text-slate-100">Full Activity</h6>
+                                    <div x-data="{ dropdown: false}" class="ml-auto dropdown">
+                                        <a href="javaScript:;" class="text-black dark:text-white" @click="dropdown = !dropdown" @keydown.escape="dropdown = false">
+                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9 12.75C9.69036 12.75 10.25 13.3096 10.25 14C10.25 14.6904 9.69036 15.25 9 15.25C8.30964 15.25 7.75 14.6904 7.75 14C7.75 13.3096 8.30964 12.75 9 12.75Z" fill="currentColor"></path>
+                                                <path d="M14 12.75C14.6904 12.75 15.25 13.3096 15.25 14C15.25 14.6904 14.6904 15.25 14 15.25C13.3096 15.25 12.75 14.6904 12.75 14C12.75 13.3096 13.3096 12.75 14 12.75Z" fill="currentColor"></path>
+                                                <path d="M20.25 14C20.25 13.3096 19.6904 12.75 19 12.75C18.3096 12.75 17.75 13.3096 17.75 14C17.75 14.6904 18.3096 15.25 19 15.25C19.6904 15.25 20.25 14.6904 20.25 14Z" fill="currentColor"></path>
+                                            </svg>
+                                        </a>
+                                        <ul x-show="dropdown" @click.away="dropdown = false" x-transition="" x-transition.duration.300ms="" class="ltr:right-0 rtl:left-0 whitespace-nowrap" style="display: none;">
+                                            <li><a href="javascript:;">Weekly</a></li>
+                                            <li><a href="javascript:;">Monthly</a></li>
+                                            <li><a href="javascript:;">Yearly</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center">
+                                        <div class="relative flex items-center justify-center">
+                                            <img src="assets/images/avatar-12.png" class="rounded-full size-12 me-2" alt="">
+                                            <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
+                                                <i class="text-sm ri-home-2-fill"></i>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h4>Viewed your profile </h4>
+                                            <span class="text-xs text-muted">
+                                                <i class="ri-time-line"></i> 1:20
+                                            </span>
                                         </div>
                                     </div>
-                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
-                                        <div class="flex items-center">
-                                            <div class="relative flex items-center justify-center">
-                                                <img src="assets/images/avatar-12.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
-                                                    <i class="text-sm ri-home-2-fill"></i>
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <h4>Viewed your profile </h4>
-                                                <span class="text-xs text-muted">
-                                                    <i class="ri-time-line"></i> 1:20
-                                                </span>
-                                            </div>
+                                    <span class="text-muted">16 Aug</span>
+                                </div>
+                                <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center">
+                                        <div class="relative flex items-center justify-center">
+                                            <img src="assets/images/avatar-14.png" class="rounded-full size-12 me-2" alt="">
+                                            <span class="absolute flex items-center justify-center font-semibold text-white uppercase bg-green-500 border-2 border-white rounded-full -bottom-1 -right-1 size-7 me-2">
+                                                <i class="text-sm ri-thumb-up-fill"></i>
+                                            </span>
                                         </div>
-                                        <span class="text-muted">16 Aug</span>
-                                    </div>
-                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
-                                        <div class="flex items-center">
-                                            <div class="relative flex items-center justify-center">
-                                                <img src="assets/images/avatar-14.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase bg-green-500 border-2 border-white rounded-full -bottom-1 -right-1 size-7 me-2">
-                                                    <i class="text-sm ri-thumb-up-fill"></i>
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <h4>Liked has been your selling </h4>
-                                                <span class="text-xs text-muted">
-                                                    <i class="ri-time-line"></i> 5:23
-                                                </span>
-                                            </div>
+                                        <div>
+                                            <h4>Liked has been your selling </h4>
+                                            <span class="text-xs text-muted">
+                                                <i class="ri-time-line"></i> 5:23
+                                            </span>
                                         </div>
-                                        <span class="text-muted">8 Aug</span>
                                     </div>
-                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
-                                        <div class="flex items-center">
-                                            <div class="relative flex items-center justify-center">
-                                                <img src="assets/images/avatar-15.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase bg-red-500 border-2 border-white rounded-full -bottom-1 -right-1 size-7 me-2">
-                                                    <i class="text-sm ri-heart-fill"></i>
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <h4>Liked has been your selling </h4>
-                                                <span class="text-xs text-muted">
-                                                    <i class="ri-time-line"></i> 18:50
-                                                </span>
-                                            </div>
+                                    <span class="text-muted">8 Aug</span>
+                                </div>
+                                <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center">
+                                        <div class="relative flex items-center justify-center">
+                                            <img src="assets/images/avatar-15.png" class="rounded-full size-12 me-2" alt="">
+                                            <span class="absolute flex items-center justify-center font-semibold text-white uppercase bg-red-500 border-2 border-white rounded-full -bottom-1 -right-1 size-7 me-2">
+                                                <i class="text-sm ri-heart-fill"></i>
+                                            </span>
                                         </div>
-                                        <span class="text-muted">4 Aug</span>
-                                    </div>
-                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
-                                        <div class="flex items-center">
-                                            <div class="relative flex items-center justify-center">
-                                                <img src="assets/images/avatar-16.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
-                                                    <i class="text-sm ri-home-2-fill"></i>
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <h4>Viewed your profile </h4>
-                                                <span class="text-xs text-muted">
-                                                    <i class="ri-time-line"></i> 18:50
-                                                </span>
-                                            </div>
+                                        <div>
+                                            <h4>Liked has been your selling </h4>
+                                            <span class="text-xs text-muted">
+                                                <i class="ri-time-line"></i> 18:50
+                                            </span>
                                         </div>
-                                        <span class="text-muted">31 Jul</span>
                                     </div>
-                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
-                                        <div class="flex items-center">
-                                            <div class="relative flex items-center justify-center">
-                                                <img src="assets/images/avatar-17.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
-                                                    <i class="text-sm ri-home-2-fill"></i>
-                                                </span>
-                                            </div>
-                                            <div>
-                                                <h4>Viewed your profile </h4>
-                                                <span class="text-xs text-muted">
-                                                    <i class="ri-time-line"></i> 18:50
-                                                </span>
-                                            </div>
+                                    <span class="text-muted">4 Aug</span>
+                                </div>
+                                <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center">
+                                        <div class="relative flex items-center justify-center">
+                                            <img src="assets/images/avatar-16.png" class="rounded-full size-12 me-2" alt="">
+                                            <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
+                                                <i class="text-sm ri-home-2-fill"></i>
+                                            </span>
                                         </div>
-                                        <span class="text-muted">28 Jul</span>
+                                        <div>
+                                            <h4>Viewed your profile </h4>
+                                            <span class="text-xs text-muted">
+                                                <i class="ri-time-line"></i> 18:50
+                                            </span>
+                                        </div>
                                     </div>
+                                    <span class="text-muted">31 Jul</span>
+                                </div>
+                                <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center">
+                                        <div class="relative flex items-center justify-center">
+                                            <img src="assets/images/avatar-17.png" class="rounded-full size-12 me-2" alt="">
+                                            <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
+                                                <i class="text-sm ri-home-2-fill"></i>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h4>Viewed your profile </h4>
+                                            <span class="text-xs text-muted">
+                                                <i class="ri-time-line"></i> 18:50
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="text-muted">28 Jul</span>
                                 </div>
                             </div>
                         </div>
                         <!-- end col -->
-                        <div class="col-span-12 xl:col-span-4 md:col-span-6">
-                            <div class="card">
-                                <div class="flex justify-between items-center mb-[5px]">
-                                    <h5 class="text-lg font-semibold">Sales Analytics</h5>
-                                    <a href="#" class="px-3 py-1.5 rounded-md text-xs border border-black/20 dark:border-darkborder text-muted"><i class="align-bottom ltr:mr-1 rtl:ml-1 ri-filter-line"></i> Aug 2023</a>
-                                </div>
-                                <div id="analytics"></div>
+                        <div class="col-span-12 xl:col-span-4 md:col-span-6 card">
+                            <div class="flex justify-between items-center mb-[5px]">
+                                <h5 class="text-lg font-semibold">Agent Analytics</h5>
+                                <a href="#" class="px-3 py-1.5 rounded-md text-xs border border-black/20 dark:border-darkborder text-muted"><i class="align-bottom ltr:mr-1 rtl:ml-1 ri-filter-line"></i> Aug 2024</a>
                             </div>
+                            <div id="analytics"></div>
                         </div>
                         <!-- end col -->
                     </div>
@@ -506,7 +504,7 @@
 
 <script type="module" src="assets/js/main.js"></script>
 <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-<script src="assets/js/pages/real-estate..js"></script>
+<script src="assets/js/pages/real-estate.js"></script>
 
 </body>
 

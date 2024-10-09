@@ -37,7 +37,7 @@
                         <div class="xl:col-span-12 col-span-12">
                             <div class="card">
                                 <h6 class="mb-4 text-lg">Have any Questions ?</h6>
-                                <div x-data="{tab: 1}"  x-init="setTimeout(() => accordion(1, true))">
+                                <div x-data="{tab: 1}" x-init="setTimeout(() => accordion(1, true))">
                                     <div class="flex flex-wrap w-full bg-gray-50 dark:bg-dark rounded-md border dark:border-darkborder">
                                         <a class="flex-1 p-2 text-sm flex items-center sm:justify-start justify-center" href="#" @click.prevent="tab = 1.">
                                             <span class="py-2 px-3.5 rounded-full me-2 border-2 border-purple bg-purple text-light" :class="{'bg-purple text-light': tab === 1, 'transform': tab !== 1}">1</span>
@@ -295,29 +295,7 @@
 
 <script type="module" src="assets/js/main.js"></script>
 
-<script>
-    function accordion(index, defaultOpen = false) {
-        return {
-            isOpen: defaultOpen,
-            handleClick() {
-                this.isOpen = !this.isOpen;
-            },
-            // handleToggle() {
-            //     // Using dynamic ref based on the index for uniqueness
-            //     const tabRef = this.$refs[`tab${index}`];
-            //     return this.isOpen ? { maxHeight: tabRef.scrollHeight + 'px' } : { maxHeight: '0px' };
-            // },
-            handleToggle() {
-                console.log(" function called");
-
-                return this.isOpen ? { maxHeight: this.$refs.tab.scrollHeight + 'px' } : { maxHeight: '0px' };
-            },
-            handleRotate() {
-                return this.isOpen ? 'rotate-180' : '';
-            }
-        };
-    }
-</script>
+<script src="assets/js/pages/faqs.js"></script>
 
 </body>
 

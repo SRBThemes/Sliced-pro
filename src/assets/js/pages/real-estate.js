@@ -44,7 +44,6 @@ var options = {
         },
     },
 };
-
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
@@ -92,7 +91,6 @@ var options = {
         },
     },
 };
-
 var chart = new ApexCharts(document.querySelector("#chart2"), options);
 chart.render();
 
@@ -140,106 +138,54 @@ var options = {
         },
     },
 };
-
 var chart = new ApexCharts(document.querySelector("#chart3"), options);
 chart.render();
 
 // overview
 var options = {
     series: [{
-        name: 'Income',
-        type: 'column',
-        data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
-    }, {
-        name: 'Cashflow',
-        type: 'column',
-        data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5]
-    }, {
-        name: 'Revenue',
-        type: 'column',
-        data: [20, 29, 37, 36, 44, 45, 50, 58]
+        name: 'Reservations',
+        data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 57, 56, 61]
     }],
     chart: {
-        height: 360,
         type: 'bar',
-        stacked: false,
+        height: 350,
         toolbar: {
-            show: false
-        }
+            show: false,
+        },
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            columnWidth: '40%',
+            endingShape: 'rounded'
+        },
     },
     dataLabels: {
         enabled: false
     },
     stroke: {
-        width: [1, 1, 4]
+        show: true,
+        width: 2,
+        colors: ['transparent']
     },
     xaxis: {
-        categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+        categories: ['15 Oct', '16 Oct', '17 Oct', '18 Oct', '19 Oct', '20 Oct', '21 Oct', '22 Oct', '23 Oct', '24 Oct', '25 Oct', '26 Oct'],
     },
-    yaxis: [
-        {
-            seriesName: 'Income',
-            axisTicks: {
-                show: true,
-            },
-            axisBorder: {
-                show: true,
-                color: '#008FFB'
-            },
-            labels: {
-                style: {
-                    colors: '#008FFB',
-                }
-            },
-            tooltip: {
-                enabled: true
-            }
-        },
-        {
-            seriesName: 'Cashflow',
-            opposite: true,
-            axisTicks: {
-                show: true,
-            },
-            axisBorder: {
-                show: true,
-                color: '#00E396'
-            },
-            labels: {
-                style: {
-                    colors: '#00E396',
-                }
-            },
-        },
-        {
-            seriesName: 'Revenue',
-            opposite: true,
-            axisTicks: {
-                show: true,
-            },
-            axisBorder: {
-                show: true,
-                color: '#FEB019'
-            },
-            labels: {
-                style: {
-                    colors: '#FEB019',
-                },
-            },
-        },
-    ],
-    legend: {
-        horizontalAlign: 'left',
-        offsetX: 40
-    }
+    fill: {
+        colors: ['#000']
+      },
+    fill: {
+        opacity: 1
+    },
 };
-
 var chart = new ApexCharts(document.querySelector("#overview"), options);
 chart.render();
 
 // pie chart
 var options = {
-    series: [44, 55, 41, 17, 15],
+    labels: ['Residential', 'Farm House', 'Commercial', 'Others'],
+    series: [44, 55, 33, 10],
     chart: {
         type: 'donut',
         height: 400,
@@ -256,7 +202,8 @@ chart.render();
 
 // analytics
 var options = {
-    series: [14, 21, 10, 12, 17, 21],
+    labels: ['Residential', 'Farm House', 'Commercial', 'Row House', 'Others'],
+    series: [14, 21, 10, 18, 5],
     chart: {
         type: 'polarArea',
         height: 400,
