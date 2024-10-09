@@ -18,7 +18,7 @@
     <!-- End detached bg -->
 
     <!-- Start Menu Sidebar Overlay -->
-    <div x-cloak class="fixed inset-0 bg-black/60 dark:bg-dark/90 z-10 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
+    <div x-cloak class="fixed inset-0 z-10 bg-black/60 dark:bg-dark/90 lg:hidden" :class="{'hidden' : !$store.app.sidebar}" @click="$store.app.toggleSidebar()"></div>
     <!-- End Menu Sidebar Overlay -->
 
     <!-- Start Main Content -->
@@ -36,69 +36,69 @@
                 <!-- Start All Card -->
                 <div class="flex flex-col gap-4 min-h-[calc(100vh-212px)]">
                     <div class="grid grid-cols-12 gap-4">
-                        <div class="xl:col-span-9 col-span-12">
+                        <div class="col-span-12 xl:col-span-9">
                             <div class="grid grid-cols-12 gap-4">
-                                <div class="xl:col-span-4 lg:col-span-12 col-span-12">
-                                    <div class="card gap-6">
+                                <div class="col-span-12 xl:col-span-4 lg:col-span-12">
+                                    <div class="gap-6 card">
                                         <div class="flex items-center justify-between mb-4">
                                             <div class="shrink-0">
-                                                <p class="text-base dark:text-gray-300 mb-2">Residential</p>
-                                                <div class="flex items-center justify-center font-semibold uppercase rounded-full size-8 bg-green-500/20 text-green-500 me-2">
-                                                    <i class="ri-building-line text-lg"></i>
+                                                <p class="mb-2 text-base dark:text-gray-300">Residential</p>
+                                                <div class="flex items-center justify-center font-semibold text-green-500 uppercase rounded-full size-8 bg-green-500/20 me-2">
+                                                    <i class="text-lg ri-building-line"></i>
                                                 </div>
                                             </div>
                                             <div id="chart" dir="ltr"></div>
                                         </div>
-                                        <div class="flex justify-between items-center border-t border-light dark:border-darkborder pt-4">
+                                        <div class="flex items-center justify-between pt-4 border-t border-light dark:border-darkborder">
                                             <h4 class="items-center gap-4 text-xl font-semibold text-slate-800 dark:text-slate-100">102
-                                                <span class="p-1 px-2 text-sm leading-none rounded-md bg-success/20 text-green-500">+ 8% <i class="ri-arrow-right-up-line"></i> </span>
+                                                <span class="p-1 px-2 text-sm leading-none text-green-500 rounded-md bg-success/20">+ 8% <i class="ri-arrow-right-up-line"></i> </span>
                                             </h4>
                                             <a href="#!" class="hover:text-purple">Show More <i class="ri-arrow-right-line"></i> </a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- end col -->
-                                <div class="xl:col-span-4 lg:col-span-12 col-span-12">
-                                    <div class="card gap-6">
+                                <div class="col-span-12 xl:col-span-4 lg:col-span-12">
+                                    <div class="gap-6 card">
                                         <div class="flex items-center justify-between mb-4">
                                             <div class="shrink-0">
-                                                <p class="text-base dark:text-gray-300 mb-2">Farm House</p>
-                                                <div class="flex items-center justify-center font-semibold uppercase rounded-full size-8 bg-red-500/20 text-red-500 me-2">
-                                                    <i class="ri-home-heart-line text-lg"></i>
+                                                <p class="mb-2 text-base dark:text-gray-300">Farm House</p>
+                                                <div class="flex items-center justify-center font-semibold text-red-500 uppercase rounded-full size-8 bg-red-500/20 me-2">
+                                                    <i class="text-lg ri-home-heart-line"></i>
                                                 </div>
                                             </div>
                                             <div id="chart2" dir="ltr"></div>
                                         </div>
-                                        <div class="flex justify-between items-center border-t border-light dark:border-darkborder pt-4">
+                                        <div class="flex items-center justify-between pt-4 border-t border-light dark:border-darkborder">
                                             <h4 class="items-center gap-4 text-xl font-semibold text-slate-800 dark:text-slate-100">109
-                                                <span class="p-1 px-2 text-sm leading-none rounded-md bg-red-500/20 text-red-500">+ 3% <i class="ri-arrow-right-down-line"></i> </span>
+                                                <span class="p-1 px-2 text-sm leading-none text-red-500 rounded-md bg-red-500/20">+ 3% <i class="ri-arrow-right-down-line"></i> </span>
                                             </h4>
                                             <a href="#!" class="hover:text-purple">Show More <i class="ri-arrow-right-line"></i> </a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- end col -->
-                                <div class="xl:col-span-4 lg:col-span-12 col-span-12">
-                                    <div class="card gap-6">
+                                <div class="col-span-12 xl:col-span-4 lg:col-span-12">
+                                    <div class="gap-6 card">
                                         <div class="flex items-center justify-between mb-4">
                                             <div class="shrink-0">
-                                                <p class="text-base dark:text-gray-300 mb-2">Commercial</p>
-                                                <div class="flex items-center justify-center font-semibold uppercase rounded-full size-8 bg-green-500/20 text-green-500 me-2">
-                                                    <i class="ri-building-4-line text-lg"></i>
+                                                <p class="mb-2 text-base dark:text-gray-300">Commercial</p>
+                                                <div class="flex items-center justify-center font-semibold text-green-500 uppercase rounded-full size-8 bg-green-500/20 me-2">
+                                                    <i class="text-lg ri-building-4-line"></i>
                                                 </div>
                                             </div>
                                             <div id="chart3" dir="ltr"></div>
                                         </div>
-                                        <div class="flex justify-between items-center border-t border-light dark:border-darkborder pt-4">
+                                        <div class="flex items-center justify-between pt-4 border-t border-light dark:border-darkborder">
                                             <h4 class="items-center gap-4 text-xl font-semibold text-slate-800 dark:text-slate-100">92
-                                                <span class="p-1 px-2 text-sm leading-none rounded-md bg-success/20 text-green-500">+ 6% <i class="ri-arrow-right-up-line"></i> </span>
+                                                <span class="p-1 px-2 text-sm leading-none text-green-500 rounded-md bg-success/20">+ 6% <i class="ri-arrow-right-up-line"></i> </span>
                                             </h4>
                                             <a href="#!" class="hover:text-purple">Show More <i class="ri-arrow-right-line"></i> </a>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- end col -->
-                                <div class="xl:col-span-12 col-span-12">
+                                <div class="col-span-12 xl:col-span-12">
                                     <div class="card">
                                         <div id="overview"></div>
                                     </div>
@@ -108,13 +108,13 @@
                             <!-- end grid -->
                         </div>
                         <!-- end col -->
-                        <div class="xl:col-span-3 col-span-12">
+                        <div class="col-span-12 xl:col-span-3">
                             <div class="grid grid-cols-12 gap-4">
-                                <div class="xl:col-span-12 col-span-12">
+                                <div class="col-span-12 xl:col-span-12">
                                     <div class="card">
-                                        <div class="flex border-b dark:border-darkborder pb-3 mb-3">
-                                            <img src="assets/images/property/img-8.png" class="xl:w-2/6 sm:w-2/12 w-5/12 rounded-md" alt="">
-                                            <div class="ms-4 w-full">
+                                        <div class="flex pb-3 mb-3 border-b dark:border-darkborder">
+                                            <img src="assets/images/property/img-8.png" class="w-5/12 rounded-md xl:w-2/6 sm:w-2/12" alt="">
+                                            <div class="w-full ms-4">
                                                 <div class="flex justify-between">
                                                     <h5 class="mb-2 font-semibold">Alexander Court</h5>
                                                     <i class="ri-more-2-line"></i>
@@ -126,7 +126,7 @@
                                                     <span>2 Bathroom</span>
                                                 </div>
                                                 <p class="mb-3">500sq</p>
-                                                <div class="border-t dark:border-darkborder mb-3"></div>
+                                                <div class="mb-3 border-t dark:border-darkborder"></div>
                                                 <div class="flex justify-between">
                                                     <h6>$800</h6>
                                                     <span>
@@ -136,9 +136,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="flex border-b dark:border-darkborder pb-3 mb-3">
-                                            <img src="assets/images/property/img-7.png" class="xl:w-2/6 sm:w-2/12 w-5/12 rounded-md" alt="">
-                                            <div class="ms-4 w-full">
+                                        <div class="flex pb-3 mb-3 border-b dark:border-darkborder">
+                                            <img src="assets/images/property/img-7.png" class="w-5/12 rounded-md xl:w-2/6 sm:w-2/12" alt="">
+                                            <div class="w-full ms-4">
                                                 <div class="flex justify-between">
                                                     <h5 class="mb-2 font-semibold">Forest Villa</h5>
                                                     <i class="ri-more-2-line"></i>
@@ -150,7 +150,7 @@
                                                     <span>2 Bathroom</span>
                                                 </div>
                                                 <p class="mb-3">500sq</p>
-                                                <div class="border-t dark:border-darkborder mb-3"></div>
+                                                <div class="mb-3 border-t dark:border-darkborder"></div>
                                                 <div class="flex justify-between">
                                                     <h6>$800</h6>
                                                     <span>
@@ -160,9 +160,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="flex border-b dark:border-darkborder pb-3 mb-3">
-                                            <img src="assets/images/property/img-9.png" class="xl:w-2/6 sm:w-2/12 w-5/12 rounded-md" alt="">
-                                            <div class="ms-4 w-full">
+                                        <div class="flex pb-3 mb-3 border-b dark:border-darkborder">
+                                            <img src="assets/images/property/img-9.png" class="w-5/12 rounded-md xl:w-2/6 sm:w-2/12" alt="">
+                                            <div class="w-full ms-4">
                                                 <div class="flex justify-between">
                                                     <h5 class="mb-2 font-semibold">Penthouse Flat</h5>
                                                     <i class="ri-more-2-line"></i>
@@ -174,7 +174,7 @@
                                                     <span>2 Bathroom</span>
                                                 </div>
                                                 <p class="mb-3">500sq</p>
-                                                <div class="border-t dark:border-darkborder mb-3"></div>
+                                                <div class="mb-3 border-t dark:border-darkborder"></div>
                                                 <div class="flex justify-between">
                                                     <h6>$800</h6>
                                                     <span>
@@ -184,9 +184,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="flex border-b dark:border-darkborder pb-3 mb-3">
-                                            <img src="assets/images/property/img-10.png" class="xl:w-2/6 sm:w-2/12 w-5/12 rounded-md" alt="">
-                                            <div class="ms-4 w-full">
+                                        <div class="flex pb-3 mb-3 border-b dark:border-darkborder">
+                                            <img src="assets/images/property/img-10.png" class="w-5/12 rounded-md xl:w-2/6 sm:w-2/12" alt="">
+                                            <div class="w-full ms-4">
                                                 <div class="flex justify-between">
                                                     <h5 class="mb-2 font-semibold">Duplex Flat</h5>
                                                     <i class="ri-more-2-line"></i>
@@ -198,7 +198,7 @@
                                                     <span>2 Bathroom</span>
                                                 </div>
                                                 <p class="mb-3">500sq</p>
-                                                <div class="border-t dark:border-darkborder mb-3"></div>
+                                                <div class="mb-3 border-t dark:border-darkborder"></div>
                                                 <div class="flex justify-between">
                                                     <h6>$800</h6>
                                                     <span>
@@ -215,10 +215,10 @@
                     </div>
                     <!-- end grid -->
                     <div class="grid grid-cols-12 gap-4">
-                        <div class="xl:col-span-3 col-span-12">
+                        <div class="col-span-12 xl:col-span-3">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="cart-header flex justify-between">
+                                    <div class="flex justify-between cart-header">
                                         <h6 class="mb-4 text-base font-semibold capitalize text-slate-800 dark:text-slate-100">Agent List</h6>
                                         <div x-data="{ dropdown: false}" class="ml-auto dropdown">
                                             <a href="javaScript:;" class="text-black dark:text-white" @click="dropdown = !dropdown" @keydown.escape="dropdown = false">
@@ -235,7 +235,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex items-center justify-between py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-3.png" class="rounded-full size-8 me-2" alt="">
                                             <div>
@@ -246,7 +246,7 @@
                                         <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                     <hr class="dark:border-darkborder">
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex items-center justify-between py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-8.png" class="rounded-full size-8 me-2" alt="">
                                             <div>
@@ -257,7 +257,7 @@
                                         <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                     <hr class="dark:border-darkborder">
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex items-center justify-between py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-5.png" class="rounded-full size-8 me-2" alt="">
                                             <div>
@@ -268,7 +268,7 @@
                                         <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                     <hr class="dark:border-darkborder">
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex items-center justify-between py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-6.png" class="rounded-full size-8 me-2" alt="">
                                             <div>
@@ -279,7 +279,7 @@
                                         <a href="#!" class="px-2 py-1 bg-gray-100 dark:bg-darklight dark:hover:bg-dark dark:text-white dark:border-darkborder border border-gray-300 rounded-md transition-all duration-300 hover:bg-black/[0.85] hover:text-white hover:border-black/[0.60] inline-block">Contact <i class="ri-phone-line"></i> </a>
                                     </div>
                                     <hr class="dark:border-darkborder">
-                                    <div class="flex justify-between items-center py-3">
+                                    <div class="flex items-center justify-between py-3">
                                         <div class="flex items-center">
                                             <img src="assets/images/avatar-7.png" class="rounded-full size-8 me-2" alt="">
                                             <div>
@@ -294,7 +294,7 @@
                             <!-- end card -->
                         </div>
                         <!-- end col -->
-                        <div class="xl:col-span-9 col-span-12">
+                        <div class="col-span-12 xl:col-span-9">
                             <div class="card">
                                 <div class="flex justify-between mb-4">
                                     <h2 class="text-base font-semibold capitalize text-slate-800 dark:text-slate-100">Find Property </h2>
@@ -363,20 +363,20 @@
                     </div>
                     <!-- end grid -->
                     <div class="grid grid-cols-12 gap-4">
-                        <div class="xl:col-span-4 md:col-span-6 col-span-12">
+                        <div class="col-span-12 xl:col-span-4 md:col-span-6">
                             <div class="card">
                                 <div class="flex justify-between items-center mb-[5px]">
-                                    <h5 class="font-semibold text-lg">Sales Analytics</h5>
+                                    <h5 class="text-lg font-semibold">Sales Analytics</h5>
                                     <a href="#" class="px-3 py-1.5 rounded-md text-xs border border-black/20 dark:border-darkborder text-muted"><i class="align-bottom ltr:mr-1 rtl:ml-1 ri-filter-line"></i> Aug 2023</a>
                                 </div>
                                 <div id="pie"></div>
                             </div>
                         </div>
                         <!-- end col -->
-                        <div class="xl:col-span-4 md:col-span-6 col-span-12 lg:-order-none order-1">
+                        <div class="order-1 col-span-12 xl:col-span-4 md:col-span-6 lg:-order-none">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="cart-header flex justify-between">
+                                    <div class="flex justify-between cart-header">
                                         <h6 class="mb-4 text-base font-semibold capitalize text-slate-800 dark:text-slate-100">Full Activity</h6>
                                         <div x-data="{ dropdown: false}" class="ml-auto dropdown">
                                             <a href="javaScript:;" class="text-black dark:text-white" @click="dropdown = !dropdown" @keydown.escape="dropdown = false">
@@ -393,12 +393,12 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
-                                            <div class="flex items-center justify-center relative">
+                                            <div class="relative flex items-center justify-center">
                                                 <img src="assets/images/avatar-12.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute -bottom-1 -right-1 flex items-center justify-center font-semibold uppercase rounded-full size-7 bg-purple text-white me-2 border-2 border-white">
-                                                    <i class="ri-home-2-fill text-sm"></i>
+                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
+                                                    <i class="text-sm ri-home-2-fill"></i>
                                                 </span>
                                             </div>
                                             <div>
@@ -410,12 +410,12 @@
                                         </div>
                                         <span class="text-muted">16 Aug</span>
                                     </div>
-                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
-                                            <div class="flex items-center justify-center relative">
+                                            <div class="relative flex items-center justify-center">
                                                 <img src="assets/images/avatar-14.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute -bottom-1 -right-1 flex items-center justify-center font-semibold uppercase rounded-full size-7 bg-green-500 text-white me-2 border-2 border-white">
-                                                    <i class="ri-thumb-up-fill text-sm"></i>
+                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase bg-green-500 border-2 border-white rounded-full -bottom-1 -right-1 size-7 me-2">
+                                                    <i class="text-sm ri-thumb-up-fill"></i>
                                                 </span>
                                             </div>
                                             <div>
@@ -427,12 +427,12 @@
                                         </div>
                                         <span class="text-muted">8 Aug</span>
                                     </div>
-                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
-                                            <div class="flex items-center justify-center relative">
+                                            <div class="relative flex items-center justify-center">
                                                 <img src="assets/images/avatar-15.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute -bottom-1 -right-1 flex items-center justify-center font-semibold uppercase rounded-full size-7 bg-red-500 text-white me-2 border-2 border-white">
-                                                    <i class="ri-heart-fill text-sm"></i>
+                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase bg-red-500 border-2 border-white rounded-full -bottom-1 -right-1 size-7 me-2">
+                                                    <i class="text-sm ri-heart-fill"></i>
                                                 </span>
                                             </div>
                                             <div>
@@ -444,12 +444,12 @@
                                         </div>
                                         <span class="text-muted">4 Aug</span>
                                     </div>
-                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
-                                            <div class="flex items-center justify-center relative">
+                                            <div class="relative flex items-center justify-center">
                                                 <img src="assets/images/avatar-16.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute -bottom-1 -right-1 flex items-center justify-center font-semibold uppercase rounded-full size-7 bg-purple text-white me-2 border-2 border-white">
-                                                    <i class="ri-home-2-fill text-sm"></i>
+                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
+                                                    <i class="text-sm ri-home-2-fill"></i>
                                                 </span>
                                             </div>
                                             <div>
@@ -461,12 +461,12 @@
                                         </div>
                                         <span class="text-muted">31 Jul</span>
                                     </div>
-                                    <div class="flex justify-between items-center py-3 border-b dark:border-darkborder">
+                                    <div class="flex items-center justify-between py-3 border-b dark:border-darkborder">
                                         <div class="flex items-center">
-                                            <div class="flex items-center justify-center relative">
+                                            <div class="relative flex items-center justify-center">
                                                 <img src="assets/images/avatar-17.png" class="rounded-full size-12 me-2" alt="">
-                                                <span class="absolute -bottom-1 -right-1 flex items-center justify-center font-semibold uppercase rounded-full size-7 bg-purple text-white me-2 border-2 border-white">
-                                                    <i class="ri-home-2-fill text-sm"></i>
+                                                <span class="absolute flex items-center justify-center font-semibold text-white uppercase border-2 border-white rounded-full -bottom-1 -right-1 size-7 bg-purple me-2">
+                                                    <i class="text-sm ri-home-2-fill"></i>
                                                 </span>
                                             </div>
                                             <div>
@@ -482,10 +482,10 @@
                             </div>
                         </div>
                         <!-- end col -->
-                        <div class="xl:col-span-4 md:col-span-6 col-span-12">
+                        <div class="col-span-12 xl:col-span-4 md:col-span-6">
                             <div class="card">
                                 <div class="flex justify-between items-center mb-[5px]">
-                                    <h5 class="font-semibold text-lg">Sales Analytics</h5>
+                                    <h5 class="text-lg font-semibold">Sales Analytics</h5>
                                     <a href="#" class="px-3 py-1.5 rounded-md text-xs border border-black/20 dark:border-darkborder text-muted"><i class="align-bottom ltr:mr-1 rtl:ml-1 ri-filter-line"></i> Aug 2023</a>
                                 </div>
                                 <div id="analytics"></div>
@@ -506,7 +506,6 @@
 
 <script type="module" src="assets/js/main.js"></script>
 <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-<script src="assets/js/pages/appexchart-app.js"></script>
 <script src="assets/js/pages/real-estate..js"></script>
 
 </body>

@@ -1,5 +1,149 @@
 // Real Estate Dashboard Js
 
+// Chart Widget 1
+var options = {
+    series: [
+        {
+            data: [10, 82, 40, 65, 20, 89, 40, 20, 70, 98],
+        },
+    ],
+    chart: {
+        height: 60,
+        type: "line",
+        fontFamily: "Nunito, sans-serif",
+        sparkline: {
+            enabled: true,
+        },
+        dropShadow: {
+            enabled: false,
+        },
+    },
+    stroke: {
+        curve: "smooth",
+        width: 2,
+    },
+    colors: ["#50cd89"],
+    grid: {
+        padding: {
+            top: 5,
+            bottom: 5,
+            left: 5,
+            right: 5,
+        },
+    },
+    tooltip: {
+        x: {
+            show: false,
+        },
+        y: {
+            title: {
+                formatter: (formatter = () => {
+                    return "";
+                }),
+            },
+        },
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+// Chart Widget 2
+var options = {
+    series: [
+        {
+            data: [10, 82, 40, 65, 20, 89, 40, 20, 70, 98],
+        },
+    ],
+    chart: {
+        height: 60,
+        type: "line",
+        fontFamily: "Nunito, sans-serif",
+        sparkline: {
+            enabled: true,
+        },
+        dropShadow: {
+            enabled: false,
+        },
+    },
+    stroke: {
+        curve: "smooth",
+        width: 2,
+    },
+    colors: ["#f1416c"],
+    grid: {
+        padding: {
+            top: 5,
+            bottom: 5,
+            left: 5,
+            right: 5,
+        },
+    },
+    tooltip: {
+        x: {
+            show: false,
+        },
+        y: {
+            title: {
+                formatter: (formatter = () => {
+                    return "";
+                }),
+            },
+        },
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart2"), options);
+chart.render();
+
+// Chart Widget 3
+var options = {
+    series: [
+        {
+            data: [0, 82, 60, 65, 0, 10, 80, 20, 70, 98],
+        },
+    ],
+    chart: {
+        height: 60,
+        type: "line",
+        fontFamily: "Nunito, sans-serif",
+        sparkline: {
+            enabled: true,
+        },
+        dropShadow: {
+            enabled: false,
+        },
+    },
+    stroke: {
+        curve: "smooth",
+        width: 2,
+    },
+    colors: ["#50cd89"],
+    grid: {
+        padding: {
+            top: 5,
+            bottom: 5,
+            left: 5,
+            right: 5,
+        },
+    },
+    tooltip: {
+        x: {
+            show: false,
+        },
+        y: {
+            title: {
+                formatter: (formatter = () => {
+                    return "";
+                }),
+            },
+        },
+    },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart3"), options);
+chart.render();
+
 // overview
 var options = {
     series: [{
@@ -98,24 +242,14 @@ var options = {
     series: [44, 55, 41, 17, 15],
     chart: {
         type: 'donut',
-        width: '100%',
+        height: 400,
     },
     legend: {
         show: true,
         position: 'bottom',
-        floating: true,
         verticalAlign: 'bottom',
         align: 'center'
     },
-    responsive: [{
-        breakpoint: 480,
-        options: {
-            chart: {
-                width: 250,
-                height: 200
-            },
-        },
-    }]
 };
 var chart = new ApexCharts(document.querySelector("#pie"), options);
 chart.render();
@@ -125,11 +259,11 @@ var options = {
     series: [14, 21, 10, 12, 17, 21],
     chart: {
         type: 'polarArea',
+        height: 400,
     },
     legend: {
         show: true,
         position: 'bottom',
-        floating: true,
         verticalAlign: 'bottom',
         align: 'center'
     },
@@ -139,17 +273,6 @@ var options = {
     fill: {
         opacity: 0.8
     },
-    responsive: [{
-        breakpoint: 480,
-        options: {
-            chart: {
-                width: 200
-            },
-            legend: {
-                position: 'bottom'
-            }
-        }
-    }]
 };
 var chart = new ApexCharts(document.querySelector("#analytics"), options);
 chart.render();
