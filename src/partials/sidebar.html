@@ -11,8 +11,8 @@
         <div class="h-[calc(100vh-60px)]  overflow-y-auto overflow-x-hidden px-5 pb-4 space-y-16 detached-menu">
             <ul class="relative flex flex-col gap-1 " x-data="sidebarMenu">
                 <h2 class="my-2 text-sm text-black/50 dark:text-white/30 group-data-[sidebar=dark]/item:text-white/30 group-data-[sidebar=brand]/item:text-sky-200/50"><span>Menu</span></h2>
-                <li class="menu nav-item">
-                    <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group " :class="{'active' : isActive('dashboard')}" @click="toggle('dashboard')">
+                <li class="menu nav-item main-menu">
+                    <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group " :class="{'active' : isActive('dashboard')}" @click="toggle('dashboard' , false)">
                         <div class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                                 <path d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM15.8329 7.33748C16.0697 7.17128 16.3916 7.19926 16.5962 7.40381C16.8002 7.60784 16.8267 7.92955 16.6587 8.16418C14.479 11.2095 13.2796 12.8417 13.0607 13.0607C12.4749 13.6464 11.5251 13.6464 10.9393 13.0607C10.3536 12.4749 10.3536 11.5251 10.9393 10.9393C11.3126 10.5661 12.9438 9.36549 15.8329 7.33748ZM17.5 11C18.0523 11 18.5 11.4477 18.5 12C18.5 12.5523 18.0523 13 17.5 13C16.9477 13 16.5 12.5523 16.5 12C16.5 11.4477 16.9477 11 17.5 11ZM6.5 11C7.05228 11 7.5 11.4477 7.5 12C7.5 12.5523 7.05228 13 6.5 13C5.94772 13 5.5 12.5523 5.5 12C5.5 11.4477 5.94772 11 6.5 11ZM8.81802 7.40381C9.20854 7.79433 9.20854 8.4275 8.81802 8.81802C8.4275 9.20854 7.79433 9.20854 7.40381 8.81802C7.01328 8.4275 7.01328 7.79433 7.40381 7.40381C7.79433 7.01328 8.4275 7.01328 8.81802 7.40381ZM12 5.5C12.5523 5.5 13 5.94772 13 6.5C13 7.05228 12.5523 7.5 12 7.5C11.4477 7.5 11 7.05228 11 6.5C11 5.94772 11.4477 5.5 12 5.5Z" fill="currentColor"></path>
@@ -33,7 +33,7 @@
                         <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </li>
-                <li class="menu nav-item">
+                <li class="menu nav-item main-menu">
                     <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('apps')}" @click="toggle('apps' , false)">
                         <div class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
@@ -55,12 +55,13 @@
                         <li><a href="calender.html">Calendar</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="kanban.html">Kanban</a></li>
-                        <li>
+                        <li class="subMenu">
                             <a href="javascript:void(0);" :class="{'active' : isSubMenuActive('real-estate')}" @click="toggle('real-estate', true)" id="submenu">
                                 <div class="flex items-center">
                                     <span class="ltr:pl-1.5 rtl:pr-1.5">Real Estate</span>
                                 </div>
-                                <div class="flex items-center justify-center w-4 h-4 dropdown-icon" :class="{'!rotate-180' : isSubMenuActive('real-estate')}">
+                                <div class="flex items-center justify-center w-4 h-4 dropdown-icon" :class=
+                                "{'!rotate-180' : isSubMenuActive('real-estate')}">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                                         <path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z" fill="currentColor"></path>
                                     </svg>
@@ -117,8 +118,8 @@
             </ul>
             </li>
             <h2 class="my-2 text-sm text-black/50 dark:text-white/30 group-data-[sidebar=dark]/item:text-white/30 group-data-[sidebar=brand]/item:text-sky-200/50"><span>UI Kit</span></h2>
-            <li class="menu nav-item">
-                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('components')}" @click="toggle('components')">
+            <li class="menu nav-item main-menu">
+                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('components')}" @click="toggle('components', false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M12 1L21.5 6.5V17.5L12 23L2.5 17.5V6.5L12 1ZM5.49388 7.0777L12.0001 10.8444L18.5062 7.07774L12 3.311L5.49388 7.0777ZM4.5 8.81329V16.3469L11.0001 20.1101V12.5765L4.5 8.81329ZM13.0001 20.11L19.5 16.3469V8.81337L13.0001 12.5765V20.11Z" fill="currentColor"></path>
@@ -145,8 +146,8 @@
                     <li><a href="ui-flatpickr.html">Flatpickr</a></li>
                 </ul>
             </li>
-            <li class="menu nav-item">
-                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('elements')}" @click="toggle('elements')">
+            <li class="menu nav-item main-menu">
+                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('elements')}" @click="toggle('elements', false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M13 9H21L11 24V15H4L13 0V9ZM11 11V7.22063L7.53238 13H13V17.3944L17.263 11H11Z" fill="currentColor"></path>
@@ -177,7 +178,7 @@
                 </ul>
             </li>
             <li class="menu nav-item">
-                <a href="chart.html" class="nav-link group" @click="toggle('single')">
+                <a href="chart.html" class="nav-link group" @click="toggle('single' , false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M9 2.4578V4.58152C6.06817 5.76829 4 8.64262 4 12C4 16.4183 7.58172 20 12 20C15.3574 20 18.2317 17.9318 19.4185 15H21.5422C20.2679 19.0571 16.4776 22 12 22C6.47715 22 2 17.5228 2 12C2 7.52236 4.94289 3.73207 9 2.4578ZM12 2C17.5228 2 22 6.47715 22 12C22 12.3375 21.9833 12.6711 21.9506 13H11V2.04938C11.3289 2.01672 11.6625 2 12 2ZM13 4.06189V11H19.9381C19.4869 7.38128 16.6187 4.51314 13 4.06189Z" fill="currentColor"></path>
@@ -187,7 +188,7 @@
                 </a>
             </li>
             <li class="menu nav-item">
-                <a href="icons.html" class="nav-link group" @click="toggle('single')">
+                <a href="icons.html" class="nav-link group" @click="toggle('single', false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C13.4702 20 14.8478 19.6034 16.0316 18.9114L15.0237 17.1835C14.1359 17.7026 13.1027 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12V13C18 13.5523 17.5523 14 17 14C16.4477 14 16 13.5523 16 13V9H14.6458C13.9407 8.37764 13.0144 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16C13.0465 16 13.9991 15.5982 14.7119 14.9404C15.2622 15.5886 16.0831 16 17 16C18.6569 16 20 14.6569 20 13V12ZM12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10Z" fill="currentColor"></path>
@@ -197,7 +198,7 @@
                 </a>
             </li>
             <li class="menu nav-item">
-                <a href="drag-and-drop.html" class="nav-link group" @click="toggle('single')">
+                <a href="drag-and-drop.html" class="nav-link group" @click="toggle('single' , false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M12 2L16.2426 6.24264L14.8284 7.65685L12 4.82843L9.17157 7.65685L7.75736 6.24264L12 2ZM2 12L6.24264 7.75736L7.65685 9.17157L4.82843 12L7.65685 14.8284L6.24264 16.2426L2 12ZM22 12L17.7574 16.2426L16.3431 14.8284L19.1716 12L16.3431 9.17157L17.7574 7.75736L22 12ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM12 22L7.75736 17.7574L9.17157 16.3431L12 19.1716L14.8284 16.3431L16.2426 17.7574L12 22Z" fill="currentColor"></path>
@@ -207,8 +208,8 @@
                 </a>
             </li>
             <h2 class="my-2 text-sm text-black/50 dark:text-white/30 group-data-[sidebar=dark]/item:text-white/30 group-data-[sidebar=brand]/item:text-sky-200/50"><span>Table & Forms</span></h2>
-            <li class="menu nav-item">
-                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('forms')}" @click="toggle('forms')">
+            <li class="menu nav-item main-menu">
+                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('forms')}" @click="toggle('forms' , false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M21 8V20.9932C21 21.5501 20.5552 22 20.0066 22H3.9934C3.44495 22 3 21.556 3 21.0082V2.9918C3 2.45531 3.4487 2 4.00221 2H14.9968L21 8ZM19 9H14V4H5V20H19V9ZM8 7H11V9H8V7ZM8 11H16V13H8V11ZM8 15H16V17H8V15Z" fill="currentColor"></path>
@@ -231,8 +232,8 @@
                     <li><a href="forms-switches.html">Switches</a></li>
                 </ul>
             </li>
-            <li class="menu nav-item">
-                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('table')}" @click="toggle('table')">
+            <li class="menu nav-item main-menu">
+                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('table')}" @click="toggle('table' , false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M4 8H20V5H4V8ZM14 19V10H10V19H14ZM16 19H20V10H16V19ZM8 19V10H4V19H8ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3Z" fill="currentColor"></path>
@@ -252,8 +253,8 @@
                 </ul>
             </li>
             <h2 class="my-2 text-sm text-black/50 dark:text-white/30 group-data-[sidebar=dark]/item:text-white/30 group-data-[sidebar=brand]/item:text-sky-200/50"><span>Users & Pages</span></h2>
-            <li class="menu nav-item">
-                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('users')}" @click="toggle('users')">
+            <li class="menu nav-item main-menu">
+                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('users')}" @click="toggle('users' , false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z" fill="currentColor"></path>
@@ -271,8 +272,8 @@
                     <li><a href="pages-users-settings.html">Settings</a></li>
                 </ul>
             </li>
-            <li class="menu nav-item">
-                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group dark:text-white/80" :class="{'active' : isActive('pages')}" @click="toggle('pages')">
+            <li class="menu nav-item main-menu">
+                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group dark:text-white/80" :class="{'active' : isActive('pages')}" @click="toggle('pages', false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M5 8V20H19V8H5ZM5 6H19V4H5V6ZM20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM7 10H11V14H7V10ZM7 16H17V18H7V16ZM13 11H17V13H13V11Z" fill="currentColor"></path>
@@ -298,8 +299,8 @@
                     <li><a href="pages-503.html">503 Error</a></li>
                 </ul>
             </li>
-            <li class="menu nav-item">
-                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('layout')}" @click="toggle('layout')">
+            <li class="menu nav-item main-menu">
+                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('layout')}" @click="toggle('layout' , false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path fill="currentColor" d="M4 21C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4ZM8 10H5V19H8V10ZM19 10H10V19H19V10ZM19 5H5V8H19V5Z"></path>
@@ -317,8 +318,8 @@
                     <li><a href="detached.html">Detached</a></li>
                 </ul>
             </li>
-            <li class="menu nav-item">
-                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('authentication')}" @click="toggle('authentication')">
+            <li class="menu nav-item main-menu">
+                <a href="javascript:void(0);" class="items-center justify-between text-black nav-link group" :class="{'active' : isActive('authentication')}" @click="toggle('authentication' ,false)">
                     <div class="flex items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
                             <path d="M6 10V20H19V10H6ZM18 8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V9C3 8.44772 3.44772 8 4 8H6V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V8ZM16 8V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8H16ZM7 11H9V13H7V11ZM7 14H9V16H7V14ZM7 17H9V19H7V17Z" fill="currentColor"></path>
