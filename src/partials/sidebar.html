@@ -56,11 +56,11 @@
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="kanban.html">Kanban</a></li>
                         <li class="subMenu">
-                            <a href="javascript:void(0);" :class="{'active' : isSubMenuActive('real-estate')}" @click="toggle('real-estate', true)" id="submenu">
+                            <a class="items-center text-black" href="javascript:void(0);" :class="{'active' : isSubMenuActive('real-estate')}" @click="toggle('real-estate', true)" id="submenu">
                                 <div class="flex items-center">
-                                    <span class="ltr:pl-1.5 rtl:pr-1.5">Real Estate</span>
+                                    <span>Real Estate</span>
                                 </div>
-                                <div class="flex items-center justify-center w-4 h-4 dropdown-icon" :class=
+                                <div class="flex items-center w-4 h-4 dropdown-icon ml-auto" :class=
                                 "{'!rotate-180' : isSubMenuActive('real-estate')}">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                                         <path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z" fill="currentColor"></path>
@@ -83,11 +83,11 @@
                             </ul>
                         </li>
                         <li class="subMenu">
-                            <a href="javascript:void(0);" :class="{'active' : isSubMenuActive('ecommerce')}" @click="toggle('ecommerce', true)" id="submenu">
+                            <a class="items-center text-black" href="javascript:void(0);" :class="{'active' : isSubMenuActive('ecommerce')}" @click="toggle('ecommerce', true)" id="submenu">
                                 <div class="flex items-center">
-                                    <span class="ltr:pl-1.5 rtl:pr-1.5">Ecommerce</span>
+                                    <span>Ecommerce</span>
                                 </div>
-                                <div class="flex items-center justify-center w-4 h-4 dropdown-icon" :class="{'!rotate-180' : isSubMenuActive('ecommerce')}">
+                                <div class="flex items-center w-4 h-4 dropdown-icon ml-auto" :class="{'!rotate-180' : isSubMenuActive('ecommerce')}">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                                         <path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z" fill="currentColor"></path>
                                     </svg>
